@@ -396,12 +396,36 @@ class LocatorHome {
       get cardMonthYear(){
         return $('//input[@class="InputElement is-empty Input Input--empty" and @name="exp-date"]');
       }
-      get cardCVC(){
-        return $('//input[@name="cvc"]');
-      }
+      // get cardCVC(){
+      //   return $('//input[@name="cvc"]');
+      // }
       get cardSaveButton(){
         return $('//button[@class="chakra-button css-wgslge"]');
       }
+
+      /* -----------------------------------------------------------------
+    
+           -------------  subscription  ----------------
+
+      ----------------------------------------------------------------- */
+
+   
+
+      get subscriptionClick(){
+        return $('//span[@class="title title2 css-1xt4lt6"]');
+      }
+
+      // get subscriptionEnterpriceYearly(){
+      //   return $("//td[contains(text(),'Enterprise Yearly')]");
+      // }
+      // get subscriptionActive(){
+      //   return $("//span[contains(text(),'active')]");
+      // }
+      // get subcriptionCancel(){
+      //   return $("//td[contains(text(),'Enterprise Yearly')]");
+      // }
+
+
 
       /* -----------------------------------------------------------------
     
@@ -420,20 +444,65 @@ class LocatorHome {
       get upgradeMonthly(){
         return $("//button[contains(text(),'UPGRADE')]");
       }
-      get pricingName(){
-        return $('//input[@name="name"]');
+      // get pricingName(){
+      //   return $('//input[@name="name"]');
+      // }
+      // get pricingEmail(){
+      //   return $('//input[@name="email"]');
+      // }
+      // get pricingPromoCode(){
+      //   return $('//input[@name="promoCode"]');
+      // }
+      // get pricingverify(){
+      //   return $('//button[@class="chakra-button css-dbnyzg"]');
+      // }
+      // get pricingCardNumber(){
+      //   return $('//input[@autocomplete="cc-number"]');
+      // }
+
+
+
+  // ---------------------------------------------- Page [AT0007] Sites -----------------------------------------------
+
+      get SitesClick(){
+        return $("//span[contains(text(),'Sites')]");
       }
-      get pricingEmail(){
-        return $('//input[@name="email"]');
+
+      /* -----------------------------------------------------------------
+    
+           -------------  Page  ----------------
+
+      ----------------------------------------------------------------- */
+
+      get pageClick(){
+        return $("//body/div[@id='root']/main[1]/div[1]/div[1]/ul[1]/div[1]/div[1]/li[2]/a[1]/div[1]/div[1]/span[1]");
       }
-      get pricingPromoCode(){
-        return $('//input[@name="promoCode"]');
+      get createNew(){
+        return $("//a[contains(text(),'Create new')]");
       }
-      get pricingverify(){
-        return $('//button[@class="chakra-button css-dbnyzg"]');
+      get addSection(){
+        return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/button[1]/*[1]");
       }
-      get pricingCardNumber(){
-        return $('//input[@autocomplete="cc-number"]');
+      get singleSection(){
+        return $("//body/div[6]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]");
+      }
+      get icon(){
+        return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]/*[1]");
+      }
+      get Heading(){
+        return $("//textarea[contains(text(),'Heading text')]");
+      }
+      //----------------------------------drag and drop-------------------------------------
+      get dragAble(){
+        return $('//div[@data-rbd-drag-handle-draggable-id="paragraph"]');
+      }
+      get dropAble(){
+        return $("//p[contains(text(),'Column')]");
+      }
+
+      dragAbleTODropAble(){
+        this.dragAble.waitForDisplayed();
+        this.dragAble.dragAndDrop(this.dropAble);
       }
 
 }

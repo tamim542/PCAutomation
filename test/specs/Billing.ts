@@ -77,12 +77,30 @@ describe(('Billing Page automaed'), () => {
     await browser.pause(4000);
     (await billing.cardMonthYear).setValue("1112");
     
-    const cvcinf=$('//*[@id="root"]/form/div/div[2]/span[2]/span[2]/span/span/input');
+    //const cvcinf=$('//*[@id="root"]/form/div/div[2]/span[2]/span[2]/span/span/input');
+    const cvcinf=$('//input[@name="cvc"]');
     (await cvcinf).clearValue();
     await cvcinf.setValue("123");
-    
+    await browser.pause(4000);
     await browser.switchToParentFrame();
-    (await billing.cardSaveButton).click();
+    //await browser.switchToFrame(null);
+    await billing.cardSaveButton.click();
+
+
+    /* -----------------------------------------------------------------
+    
+           -------------  subscription  ----------------
+
+      ----------------------------------------------------------------- */
+  //     await billing.billingClick.click();
+  //  await billing.subscriptionClick.click();
+   //await billing.subscriptionActive.click();
+   //await billing.subcriptionCancel.click();
+
+
+
+
+
 
 
     /* -----------------------------------------------------------------
@@ -94,13 +112,13 @@ describe(('Billing Page automaed'), () => {
       await billing.pricingClick.click();
       await billing.upgradeMonthly.click();
 
-      await (await billing.pricingName).setValue("tamim khan");
-      (await billing.pricingEmail).setValue("tamim@yopmail.com");
-      (await billing.pricingPromoCode).setValue("123");
-      await billing.pricingverify.click();
+      // await (await billing.pricingName).setValue("tamim khan");
+      // (await billing.pricingEmail).setValue("tamim@yopmail.com");
+      // (await billing.pricingPromoCode).setValue("123");
+      // await billing.pricingverify.click();
 
        //const pricingCardNumberIframe = '//iframe[@title="Secure card payment input frame"]'; // <iframe id="login-box"...
-       await browser.switchToFrame($('//iframe[@title="Secure card payment input frame"]'));
+      //  await browser.switchToFrame($('//iframe[@title="Secure card payment input frame"]'));
      
       //  const Pricingframe = await browser.$(pricingCardNumberIframe);
   
@@ -108,7 +126,12 @@ describe(('Billing Page automaed'), () => {
       // await browser.switchToFrame(null); // OK! Firefox and Chrome
       // await browser.switchToFrame(0); // OK! Firefox and Chrome
 
-      await (await billing.pricingCardNumber).setValue("4242 4242 4242 4242");
+      //await (await billing.pricingCardNumber).setValue("4242 4242 4242 4242");
+
+
+  
+
+
       await browser.pause(4000);
 
 
