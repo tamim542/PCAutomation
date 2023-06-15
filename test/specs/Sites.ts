@@ -1,91 +1,138 @@
-import Sites from '../pageobjects/Locators/Locators.js';
-
-describe('signin Page load', () => {
+import Sites from '../pageobjects/Locators/Locators.js'; 
+describe(('Sites automation'),()=>{
     const site = new Sites();
-    it('signin button click', async () => {
+    it(('Sites, Page automation'),async()=>{
+          //await browser.url('https://prolific-cloud.pc-staging.com/');
+       // await browser.url('https://prolific1.pc-staging.com/signin');
+       await browser.url('https://abc-5021.pc-staging.com/admin');
+       await browser.maximizeWindow();
+     
 
-        //await browser.url('https://prolific-cloud.pc-staging.com/');
-        // await browser.url('https://prolific1.pc-staging.com/signin');
-        await browser.url('https://abc-5021.pc-staging.com/admin');
-        await browser.maximizeWindow();
+       const emailSign = $("//input[@id='field-3']");
+       const passSign = $("//input[@id='field-4']");
 
+       //await emailSign.setValue('prolificcloud@yopmail.com');
+       await emailSign.setValue('abcd1@yopmail.com');
+       await passSign.setValue('abc12345');
+       //await emailSign.setValue('tamim@yopmail.com');
+       //await passSign.setValue('123456789');
 
-        const emailSign = $("//input[@id='field-3']");
-        const passSign = $("//input[@id='field-4']");
+       const firstNumber = await $("//span[@id='securityNumberOne']");
+       const twoNumber = $("//span[@id='securityNumberTwo']");
 
-        //await emailSign.setValue('prolificcloud@yopmail.com');
-        await emailSign.setValue('abcd1@yopmail.com');
-        await passSign.setValue('abc12345');
-        //await emailSign.setValue('tamim@yopmail.com');
-        //await passSign.setValue('123456789');
+       const captchaCode = $("//input[@id='field-5']");
 
-        const firstNumber = await $("//span[@id='securityNumberOne']");
-        const twoNumber = $("//span[@id='securityNumberTwo']");
+       let numOne = await firstNumber.getText();
+       let numTwo = await twoNumber.getText();
+       console.log("numOne===================================================================================" + numOne + ' ' + numTwo);
 
-        const captchaCode = $("//input[@id='field-5']");
+       let oneInt = parseInt(numOne);
+       let twoInt = parseInt(numTwo);
 
-        let numOne = await firstNumber.getText();
-        let numTwo = await twoNumber.getText();
-        console.log("numOne===================================================================================" + numOne + ' ' + numTwo);
+       console.log("num one and two============================================================================" + oneInt + ' ' + twoInt);
 
-        let oneInt = parseInt(numOne);
-        let twoInt = parseInt(numTwo);
+       let sum = oneInt + twoInt;
+       console.log("sum================================================================" + sum);
+       await captchaCode.setValue(sum);
 
-        console.log("num one and two============================================================================" + oneInt + ' ' + twoInt);
+       await $("//button[contains(text(),'Log in')]").click();
+       
 
-        let sum = oneInt + twoInt;
-        console.log("sum================================================================" + sum);
-        await captchaCode.setValue(sum);
+       await site.SitesClick.click();
 
-        await $("//button[contains(text(),'Log in')]").click();
-
-        /* -----------------------------------------------------------------
-    
-           -------------  Sites  ----------------
-
-      ----------------------------------------------------------------- */
-
-        (await site.SitesClick).click();
-
-
-        /* -----------------------------------------------------------------
+       /* -----------------------------------------------------------------
     
            -------------  Page  ----------------
 
       ----------------------------------------------------------------- */
-        (await site.pageClick).click();
-        (await site.createNew).click();
-        (await site.addSection).click();
-        await browser.pause(4000);
-        (await site.singleSection).click();
-        (await site.icon).click();
-        await browser.pause(4000);
+
+       await site.pageClick.click();
+       await site.createNew.click();
+       await site.addSection.click();
+       await site.singleSection.click();
+       await site.icon.click();
+   
+
+    //   await site.dragAble.dragAndDrop(site.dropAble);
+
+    //   // drag and drop relative from current position
+    //   await site.dragAble.dragAndDrop({ x: 100, y: 200 })
+
+    /* -----------------------------------------------------------------
+    
+           -------------  Menu Set  ----------------
+
+      ----------------------------------------------------------------- */
+
+    //   await site.SitesClick.click();
+       await site.menuSetClick.click();
+       await site.leavePageConfirm.click();
+       await site.createNewMenuSet.click();
+       await site.nameMenuSet.setValue("Testing2");
+       await site.pageMenuSet.click();
+       await site.customLinkClickMenuSet.click();
+       await site.labelClickMenuSet.setValue("two");
+       await site.linkClickMenuSet.setValue("https://prolific1.pc-staging.com/admin/menuset/create");
+       await site.addMenuMenuSet.click();
+
+       /* -----------------------------------------------------------------
+    
+           -------------  Header Set  ----------------
+
+      ----------------------------------------------------------------- */
+
+      await site.headerSetClick.click();
+      await site.leavePageConfirm.click();
+      await site.createNewHeaderSet.click();
+
+      await site.addSection.click();
+      await site.singleSection.click();
+      await site.icon.click();
+
+/* -----------------------------------------------------------------
+    
+           -------------  Footer Set  ----------------
+
+----------------------------------------------------------------- */
+
+     await site.footerClick.click();
+     await site.leavePageConfirm.click();
+     await site.createNewFooter.click();
+
+     await site.addSection.click();
+     await site.singleSection.click();
+     await site.icon.click();
 
 
-        // browser.switchToFrame($(".demo-frame"))
-        //identify source element
+     /* -----------------------------------------------------------------
+    
+           -------------  Media Library  ----------------
 
-        //identify target element
-        //const src = $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/*[1]");
-        
-        
-        const dragable = $('//div[@data-rbd-drag-handle-draggable-id="paragraph"]');
-        const dropable = $("//p[contains(text(),'Column')]");
-       // const trg = $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]/*[1]");
+   ----------------------------------------------------------------- */
 
-        await dragable.dragAndDrop(await dropable);
-        //await src.dragAndDrop({ x: 100, y: 200 });
-        (await site.Heading).setValue("abc");
-        await browser.pause(4000);
-        const getHeading = $('//div[@class="page-component-wrapper css-1ru702c"]');
-        console.log("==============++++++++++++=================", getHeading.getText());
-       
-        //site.dragAbleTODropAble();
-       
+      await site.mediaLibraryClick.click();
+      await site.leavePageConfirm.click();
 
+      const filePath = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\youtube.jpg'
+      const remoteFilePath = await browser.uploadFile(filePath)
+     
+     
+      await browser.execute(()=>{
+      
+       document.getElementById("file").style.display="block";
+      })
+    
+    
+     await site.imgAdd.setValue(remoteFilePath); // //input[@id='file-upload']
+
+     await site.nameMediaLibrary.setValue("Youtube");
+     await site.allTextMediaLibrary.setValue("Abc");
+     await site.captionMediaLibrary.setValue("Icon");
+     await site.textareaMediaLibrary.setValue("Img Upload Successfully");
+     await site.saveMediaLibrary.click();
+     
+      await browser.pause(5000);
 
 
     })
-
-
 })
