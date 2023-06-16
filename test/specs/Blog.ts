@@ -104,6 +104,22 @@ describe(('Sites automation'), () => {
 
         await blog.postClick.click();
         await blog.createNewPost.click();
+        await blog.namePost.setValue("Tamim");
+        await blog.slugPost.setValue("mcasm");
+        await blog.uploadPost.click();
+
+       
+        const filePath1 = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\youtube.jpg'
+        const remoteFilePath1 = await browser.uploadFile(filePath1)
+     
+     
+      await browser.execute(()=>{
+      
+       document.getElementById("fileUpload").style.display="block";
+      })
+    
+    
+     await blog.imgUploadPost.setValue(remoteFilePath1);
 
 
     })

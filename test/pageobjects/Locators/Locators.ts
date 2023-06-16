@@ -678,7 +678,7 @@ get saveTag(){
 
   /* -----------------------------------------------------------------
  
--------------  Post  ----------------
+  -------------  Post  ----------------
 
 ----------------------------------------------------------------- */
 
@@ -688,6 +688,88 @@ get postClick(){
 get createNewPost(){
   return $('//a[@href="/admin/blog/create"]');
 }
+get namePost(){
+  return $('//input[@name="title"]');
+}
+get slugPost(){
+  return $('//input[@name="slug"]');
+}
+get uploadPost(){
+  return $('//button[@name="featuredImage"]');
+}
+get imgUploadPost(){
+  return $('//input[@id="fileUpload"]');
+}
+get imgSavePost(){
+  return $('//button[@class="chakra-button css-1mci4gx"]');
+}
+
+
+
+// ---------------------------------------------- Page [AT0007] Operation -----------------------------------------------
+
+
+get operationClick(){
+  return $("//span[contains(text(),'Operation')]");
+}
+
+
+  /* -----------------------------------------------------------------
+ 
+  -------------  User  ----------------
+
+----------------------------------------------------------------- */
+
+get userClick(){
+  return $("//span[contains(text(),'Users')]");
+}
+get createNewOperation(){
+  return $('//a[@href="/admin/users/create"]');
+}
+get firstNameOperation(){
+  return $('//input[@name="firstName"]');
+}
+get lastNameOperation(){
+  return $('//input[@name="lastName"]');
+}
+get emailOperation(){
+  return $('//input[@name="email"]');
+}
+get phoneOperation(){
+  return $('//input[@type="tel"]');
+}
+
+get passworOperation(){
+  return $('//input[@name="password"]');
+}
+get confirmPassordOperation(){
+  return $('//input[@name="confirmPassword"]');
+}
+get saveDataOperation(){
+  return $("//button[contains(text(),'Save')]");
+}
+
+
+
+/* -----------------------------------------------------------------
+     
+    -------------  Click Opeation menu and Click User sub menu check User List Page with Pagination  ----------------
+ 
+----------------------------------------------------------------- */
+get userBackClick(){
+  return $('//span[@class="chakra-text css-xvnhps"]');
+}
+
+get showPage(){
+  return $('//select[@class="chakra-select css-15d4dk2"]');
+}
+get gaterSignClick(){
+  return $('//span[@class="chakra-text css-xvnhps"]');
+}
+get upButton(){
+  return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/*[1]");
+}
+
 
 
 
