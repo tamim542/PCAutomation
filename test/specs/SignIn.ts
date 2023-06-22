@@ -41,60 +41,6 @@ describe('signin Page load', () => {
         await browser.pause(5000);
 
 
-        const websetting = $("//span[contains(text(),'Website Settings')]");
-        websetting.click();
-
-        const theme = $("//span[contains(text(),'Theme')]");
-        theme.click();
-
-        const logoUpload = $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/button[1]");
-        await logoUpload.click();
-
-
-       
-      
-
-
-         const filePath = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\youtube.jpg'
-         const remoteFilePath = await browser.uploadFile(filePath)
-        
-        
-
-        
-        // const Div = $('//label[@class="chakra-form__label css-4sassp"]');
-         const clickToUpload = $('//input[@id="fileUpload"]');
-       
-         await browser.execute(()=>{
-         
-          document.getElementById("fileUpload").style.display="block";
-         })
-       
-        await clickToUpload.waitForDisplayed();
-        await clickToUpload.setValue(remoteFilePath); // //input[@id='file-upload']
-        const saveClickToUpload = $("//body/div[4]/div[4]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/form[1]/div[5]/button[1]");
-        await saveClickToUpload.click();
-
-        //----------------- fav icon upload ------------------------
-        await singninWebsite.favIcon.click();
-        
-       
-       
-        await browser.execute(()=>{
-        
-         document.getElementById("fileUpload").style.display="block";
-        })
-      
-       await clickToUpload.waitForDisplayed();
-       await clickToUpload.setValue(remoteFilePath); 
-       (await singninWebsite.savefavIcon).click();
-       await singninWebsite.siteFontSelect.click();
-       await singninWebsite.siteFontSelectName.click();
-
-       await browser.pause(4000);
-       await singninWebsite.saveAllData.click();
-
-        await browser.pause(4000);
-
     })
 
 

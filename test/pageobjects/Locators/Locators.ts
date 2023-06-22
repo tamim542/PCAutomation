@@ -156,6 +156,8 @@ class LocatorHome {
     return $("//input[@id='field-10']");
   }
 
+
+
   //---------------------------- signin website theme -----------------------------------------
 
   get favIcon() {
@@ -489,9 +491,20 @@ class LocatorHome {
   get icon() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]/*[1]");
   }
-  get Heading() {
-    return $("//textarea[contains(text(),'Heading text')]");
+
+
+  get useTemplatePage(){
+    return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[2]/button[2]/*[1]");
   }
+
+  
+  get importPage(){
+    return $("//body/div[7]/div[4]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]");
+  }
+
+ 
+
+  
   //----------------------------------drag and drop-------------------------------------
   get dragAble() {
     return $('//div[@data-rbd-drag-handle-draggable-id="paragraph"]');
@@ -768,6 +781,128 @@ get gaterSignClick(){
 }
 get upButton(){
   return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/*[1]");
+}
+
+
+// ---------------------------------------------- Page [AT0007] Blog -----------------------------------------------
+
+
+get websiteSettingsClick(){
+  return $("//span[contains(text(),'Website Settings')]");
+}
+
+/* -----------------------------------------------------------------
+     
+    -------------  Theme  ----------------
+ 
+----------------------------------------------------------------- */
+
+get themeClick(){
+  return $("//span[contains(text(),'Theme')]");
+}
+
+get logoUploadClickTheme(){
+  return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/button[1]");
+}
+
+get clickUploadLogo(){
+  return $('//input[@id="fileUpload"]');
+}
+
+get saveLogo(){
+  return $('//button[@class="chakra-button css-1mci4gx"]');
+}
+
+get favIconUploadClick(){
+  return $('//button[@class="chakra-button css-bg02im"]');
+}
+get clickUploadFavIcon(){
+  return $('//input[@id="fileUpload"]');
+}
+get saveFavIcon(){
+  return $('//button[@class="chakra-button css-1mci4gx"]');
+}
+
+get primaryColor(){
+  return $('//div[@id="primaryColor"]');
+}
+get yellowColor(){
+  return $('//div[@title="#F8E71C"]');
+}
+get applyPrimaryColor(){
+  return $('//button[@class="chakra-button css-iab41d"]');
+}
+
+get secondaryColor(){
+  return $('//div[@id="secondaryColor"]');
+}
+get redColor(){
+  return $('//div[@title="#D0021B"]');
+}
+get applySecondaryColor(){
+  return $('//button[@class="chakra-button css-iab41d"]');
+}
+get accentColor(){
+  return $('//div[@id="accentColor"]');
+}
+get black(){
+  return $('//div[@title="#000000"]');
+}
+get applyanccentColor(){
+  return $('//button[@class="chakra-button css-iab41d"]');
+}
+get siteFont(){
+  return $('//input[@class="chakra-input css-1c6j008"]');
+}
+get abrilSelect(){
+  return $('//input[@class="chakra-input css-1c6j008"]');
+}
+get showInSignPage(){
+  return $('//input[@class="chakra-input css-1c6j008"]');
+}
+get saveThemeUpdate(){
+  return $('//button[@class="chakra-button css-36o3yi"]');
+}
+
+/* -----------------------------------------------------------------
+             
+            -------------  Profile  ----------------
+         
+ ----------------------------------------------------------------- */
+
+get profileClick(){
+  return $("//span[contains(text(),'Profile')]");
+}
+get nameProfile(){
+  return $("//input[@name='name']");
+}
+get phoneProfile(){
+  return $('//input[@class="customWidth form-control"]');
+}
+get industryType(){
+  return $('//div[@class=" css-1hwfws3"]');
+}
+get airlineSelect(){
+  return $("//div[contains(text(),'Airline')]");
+}
+get businessAddresss(){
+  return $('//textarea[@name="address"]');
+}
+get saveProfile(){
+  return $('//textarea[@name="address"]');
+}
+
+/* -----------------------------------------------------------------
+             
+            -------------  Domain  ----------------
+         
+ ----------------------------------------------------------------- */
+
+get domainClick(){
+  return $("//span[contains(text(),'Domain')]");
+}
+get customeDomain(){
+  return $("//span[contains(text(),'Domain')]");
 }
 
 
