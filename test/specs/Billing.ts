@@ -6,12 +6,12 @@ describe(('Billing Page automaed'), () => {
 
   it(('card subscription pricing'), async () => {
     //await browser.url('https://prolific-cloud.pc-staging.com/');
-    await browser.url('https://prolific1.pc-staging.com/signin');
-    //await browser.url('https://abc-5021.pc-staging.com/admin');
+    //await browser.url('https://prolific1.pc-staging.com/signin');
+    await browser.url('https://abc-5021.pc-staging.com/admin');
     await browser.maximizeWindow();
 
     await utilities.Signin();
-   
+    await browser.takeScreenshot();
     await browser.pause(2000);
 
     (await billing.billingClick).click();
@@ -45,7 +45,7 @@ describe(('Billing Page automaed'), () => {
 
 
 
-
+    await browser.takeScreenshot();
     await billing.cardNumber.setValue("4242 4242 4242 4242");
     (await billing.cardMonthYear).setValue("1123");
     await browser.pause(4000);
@@ -60,7 +60,7 @@ describe(('Billing Page automaed'), () => {
     //await browser.switchToFrame(null);
     await billing.cardSaveButton.click();
 
-
+    await browser.takeScreenshot();
     /* -----------------------------------------------------------------
     
            -------------  subscription  ----------------
@@ -85,7 +85,7 @@ describe(('Billing Page automaed'), () => {
 
       await billing.pricingClick.click();
       await billing.upgradeMonthly.click();
-
+      await browser.takeScreenshot();
       
       //await (await billing.pricingCardNumber).setValue("4242 4242 4242 4242");
 

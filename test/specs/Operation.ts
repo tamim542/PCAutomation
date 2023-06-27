@@ -15,7 +15,7 @@ describe(('Operation automation'), () => {
 
 
         await operation.operationClick.click();
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
      
             -------------  user  ----------------
@@ -24,7 +24,7 @@ describe(('Operation automation'), () => {
 
      (await operation.userClick).click();
      await operation.createNewOperation.click();
-
+     await browser.takeScreenshot();
      (await operation.firstNameOperation).setValue("Tamim");
      (await operation.lastNameOperation).setValue("Bhuiyan");
      (await operation.emailOperation).setValue("abc@yopmail.com");
@@ -33,7 +33,7 @@ describe(('Operation automation'), () => {
      (await operation.confirmPassordOperation).setValue("123456789");
      await browser.pause(2000);
      await operation.saveDataOperation.click();
-     
+     await browser.takeScreenshot();
      await browser.pause(4000);
 
       /* -----------------------------------------------------------------
@@ -51,7 +51,7 @@ describe(('Operation automation'), () => {
         (await operation.upButton).click();
         await browser.pause(4000);
 
-
+        await browser.takeScreenshot();
 
 
 

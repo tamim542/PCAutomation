@@ -14,7 +14,7 @@ describe(('Sites automation'), () => {
        
 
         await blog.blogClick.click();
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
      
             -------------  Author  ----------------
@@ -55,6 +55,7 @@ describe(('Sites automation'), () => {
 
         await blog.authorDetailsAuthor.setValue("I am an employee of Prolific Cloud");
         await blog.saveAuthor.click();
+        await browser.takeScreenshot();
         await browser.pause(5000);
         /* -----------------------------------------------------------------
     
@@ -78,6 +79,7 @@ describe(('Sites automation'), () => {
       ----------------------------------------------------------------- */
 
         await blog.postClick.click();
+        await browser.takeScreenshot();
         await blog.createNewPost.click();
         await blog.namePost.setValue("Tamim");
         await blog.slugPost.setValue("mcasm");
@@ -95,6 +97,7 @@ describe(('Sites automation'), () => {
     
     
      await blog.imgUploadPost.setValue(remoteFilePath1);
+     await browser.takeScreenshot();
 
 
     })

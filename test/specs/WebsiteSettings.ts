@@ -74,7 +74,7 @@ describe('website setting load', () => {
         (await website.showInSignPage).click();
         (await website.saveThemeUpdate).click();
         await browser.pause(3000);
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
              
             -------------  Profile  ----------------
@@ -83,12 +83,13 @@ describe('website setting load', () => {
 
         (await website.profileClick).click();
         await browser.pause(3000);
+        await browser.takeScreenshot();
         (await website.nameProfile).setValue("Tamim Testing");
         (await website.phoneProfile).setValue("01929283884");
         (await website.industryType).click();
         (await website.airlineSelect).click();
         (await website.businessAddresss).setValue("abc slash");
-       
+        await browser.takeScreenshot();
  /* -----------------------------------------------------------------
              
             -------------  Domain  ----------------
@@ -97,7 +98,7 @@ describe('website setting load', () => {
          (await website.domainClick).click();
          (await website.customDomain).setValue("pcStaging");
          await browser.pause(3000);
-
+         await browser.takeScreenshot();
 
 
 

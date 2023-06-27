@@ -38,6 +38,7 @@ describe('signin Page load', () => {
         await captchaCode.setValue(sum);
 
         await $("//button[contains(text(),'Log in')]").click();
+        
         await browser.pause(5000);
 
 

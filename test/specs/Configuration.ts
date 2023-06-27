@@ -5,7 +5,7 @@ describe(('all configuration check'), () => {
     const configuration = new Configuration();
     const utilities = new Utilities();
     it(('configuration automate'), async () => {
-        await browser.url("https://prolific1.pc-staging.com/signin");
+        await browser.url("https://abc-5021.pc-staging.com/admin");
 
         await browser.maximizeWindow();
 
@@ -15,7 +15,7 @@ describe(('all configuration check'), () => {
         //--------------------------- [AT0022] configuration page -----------------------------------
 
         await configuration.configurationClick.click();
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
    
         ------------- chat config ----------------
@@ -33,7 +33,7 @@ describe(('all configuration check'), () => {
         (await configuration.activeWhatsupClick).click();
         (await configuration.chatConfigSaveClick).click();
 
-
+        await browser.takeScreenshot();
 
         /* -----------------------------------------------------------------
        
@@ -49,6 +49,7 @@ describe(('all configuration check'), () => {
         await configuration.googleTagManagerActive.click();
         await configuration.googleAnalyticsSave.click();
         await browser.pause(2000);
+        await browser.takeScreenshot();
 
         /* -----------------------------------------------------------------
         
@@ -77,7 +78,7 @@ describe(('all configuration check'), () => {
 
         (await configuration.mailCOnfigSave).click();
         await browser.pause(5000);
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
       
          ------------- Google Search console  ----------------
@@ -89,7 +90,7 @@ describe(('all configuration check'), () => {
         (await configuration.gooogleSearchActive).click();
         (await configuration.googleSearchSave).click();
 
-
+        await browser.takeScreenshot();
 
         /* -----------------------------------------------------------------
         
@@ -103,7 +104,7 @@ describe(('all configuration check'), () => {
         await configuration.googleAdSenseActive.click();
         await configuration.googleAdSenseSAve.click();
 
-
+        await browser.takeScreenshot();
         /* -----------------------------------------------------------------
         
            ------------- Pinterest Verification  ----------------
@@ -130,7 +131,7 @@ describe(('all configuration check'), () => {
       (await configuration.integrationSecretKey).setValue("abcdef67");
       (await configuration.integrationSave).click();
        await browser.pause(5000);
-
+       await browser.takeScreenshot();
        
 
 

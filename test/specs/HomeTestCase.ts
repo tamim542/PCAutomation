@@ -128,7 +128,7 @@ describe('Check Business site Home Page All Component and Button Functionality',
     await browser.pause(2000);
     await home.youtube.click();
     await browser.pause(2000);
-
+    await browser.takeScreenshot();
    
 
   })

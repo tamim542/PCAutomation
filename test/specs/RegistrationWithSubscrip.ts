@@ -7,7 +7,7 @@ describe(('registration with subscription'), () => {
 
         await browser.url("https://pc-staging.com/"); //  https://prolific-cloud.pc-staging.com/
         await browser.maximizeWindow();
-
+        await browser.takeScreenshot();
         await subsReg.pricingPlan.click();
         await subsReg.ententerpriseYearlyer.click();
 
@@ -22,9 +22,10 @@ describe(('registration with subscription'), () => {
         await subsReg.phoneNo.setValue("029292");
         await subsReg.password.setValue("123456789");
         await subsReg.confirmPassword.setValue("123456789");
-
+        await browser.takeScreenshot();
         await subsReg.saveButtonReg.click();
         await browser.pause(3000);
+        await browser.takeScreenshot();
 
 
     })

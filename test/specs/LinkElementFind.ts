@@ -10,6 +10,7 @@ describe('Find Elements::', () => {
                 console.log('This Is Linkable Text::::', linkText);
             }
         }
+        await browser.takeScreenshot();
         await browser.pause(2000);
     });
 });

@@ -33,7 +33,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/Sites.ts'
+        './test/specs/**/*.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -99,7 +99,7 @@ export const config: Options.Testrunner = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 60000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -136,14 +136,14 @@ export const config: Options.Testrunner = {
     // see also: https://webdriver.io/docs/dot-reporter
 
 
-    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
-        if(passed) {
-          await browser.takeScreenshot();
-        //  browser.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Assertions passed"}}');
-        } else {
-         // browser.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "At least 1 assertion failed"}}');
-        }
-      },
+    // afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+    //     if(passed) {
+    //       await browser.takeScreenshot();
+    //     //  browser.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Assertions passed"}}');
+    //     } else {
+    //      // browser.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "At least 1 assertion failed"}}');
+    //     }
+    //   },
 
 
     reporters: ['spec', ['allure', {
@@ -255,8 +255,12 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+
+        if (error){
+            browser.takeScreenshot();
+        }
+    },
 
 
     /**

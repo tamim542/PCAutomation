@@ -28,6 +28,7 @@ describe('registration field fill up', () => {
         await passField.setValue('abc12345');
         await confirmPassField.setValue('abc12345');
         await svaeButton.click();
+        await browser.takeScreenshot();
         await browser.pause(5000);
 
         // sign in 

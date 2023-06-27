@@ -486,7 +486,7 @@ class LocatorHome {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/button[1]/*[1]");
   }
   get singleSection() {
-    return $("//body/div[6]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]");
+    return $("//body/div[7]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]");
   }
   get icon() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]/*[1]");
@@ -496,10 +496,16 @@ class LocatorHome {
   get useTemplatePage(){
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[2]/button[2]/*[1]");
   }
+  get paginationFour(){
+    return $('//a[@aria-label="Page 4"]');
+  }
+  get preview(){
+    return $("//body/div[7]/div[4]/div[1]/section[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]");
+  }
 
   
   get importPage(){
-    return $("//body/div[7]/div[4]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]");
+    return $("(//button[contains(text(),'Import')])[1]");
   }
 
  
@@ -567,6 +573,14 @@ class LocatorHome {
   get createNewHeaderSet() {
     return $("//a[@href='/admin/builder/header/create']");
   }
+
+  get setHeaderName(){
+    return $("//input[@class='chakra-input css-11eu30']");
+  }
+  get headerSave(){
+    return $("(//button[contains(text(),'Save')])[1]");
+  }
+
 
   /* -----------------------------------------------------------------
  
