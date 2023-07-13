@@ -385,7 +385,7 @@ class LocatorHome {
     return $('//a[@class="chakra-link css-1krilld"]');
   }
   get cardHolderName() {
-    return $('//input[@class="chakra-input css-jg9nx" and @name="name"]');
+    return $("//input[@name='name']");
   }
   get cardEmail() {
     return $('//input[@class="chakra-input css-jg9nx" and @name="email"]');
@@ -446,23 +446,7 @@ class LocatorHome {
   get upgradeMonthly() {
     return $("//button[contains(text(),'UPGRADE')]");
   }
-  // get pricingName(){
-  //   return $('//input[@name="name"]');
-  // }
-  // get pricingEmail(){
-  //   return $('//input[@name="email"]');
-  // }
-  // get pricingPromoCode(){
-  //   return $('//input[@name="promoCode"]');
-  // }
-  // get pricingverify(){
-  //   return $('//button[@class="chakra-button css-dbnyzg"]');
-  // }
-  // get pricingCardNumber(){
-  //   return $('//input[@autocomplete="cc-number"]');
-  // }
-
-
+ 
 
   // ---------------------------------------------- Page [AT0007] Sites -----------------------------------------------
 
@@ -480,7 +464,7 @@ class LocatorHome {
     return $("//body/div[@id='root']/main[1]/div[1]/div[1]/ul[1]/div[1]/div[1]/li[2]/a[1]/div[1]/div[1]/span[1]");
   }
   get createNew() {
-    return $("//a[contains(text(),'Create new')]");
+    return $("//a[@class='chakra-link css-1krilld']");
   }
   get addSection() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/button[1]/*[1]");
@@ -575,7 +559,7 @@ class LocatorHome {
   }
 
   get setHeaderName(){
-    return $("//input[@class='chakra-input css-11eu30']");
+    return $('//input[@placeholder="Enter name"]');
   }
   get headerSave(){
     return $("(//button[contains(text(),'Save')])[1]");
@@ -593,8 +577,11 @@ class LocatorHome {
     return $("//span[contains(text(),'Footer Set')]");
   }
 
-  get createNewFooter() {
-    return $('//a[@href="/admin/builder/footer/create"]');
+  get createNewFooterClick() {
+    return $('//*[@id="root"]/main/div/div[2]/div[2]/div/div/div[1]/button');
+  }
+  get pageNameFooter() {
+    return $('//input[@placeholder="Enter name"]');
   }
 
   /* -----------------------------------------------------------------
