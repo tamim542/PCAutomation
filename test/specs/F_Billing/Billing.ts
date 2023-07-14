@@ -1,5 +1,5 @@
 import Billing from '../../pageobjects/Locators/Locators.js';
-import Utilities from '../../pageobjects/Utilities/Utilities.js';
+import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
 describe(('Billing Page automaed'), () => {
   const billing = new Billing();
   const utilities = new Utilities();

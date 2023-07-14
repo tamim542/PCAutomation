@@ -1,5 +1,5 @@
 import UI_Sites from '../../pageobjects/Locators/UI_Locators.js';
-import Utilities from '../../pageobjects/Utilities/Utilities.js';
+import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
 describe(('Sites automation'), () => {
     const uiSite = new UI_Sites();
     const utilities = new Utilities();

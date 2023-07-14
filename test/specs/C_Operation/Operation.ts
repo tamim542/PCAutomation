@@ -1,5 +1,5 @@
 import Operation from '../../pageobjects/Locators/Locators.js';
-import Utilities from '../../pageobjects/Utilities/Utilities.js';
+import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
 
 describe(('Operation automation'), () => {
     const operation = new Operation();

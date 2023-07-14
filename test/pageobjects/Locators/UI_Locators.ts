@@ -109,54 +109,54 @@ class UILocator {
     
    ----------------------------------------------------------------- */
 
-   get UI_mediaLibraryClick() {
+  get UI_mediaLibraryClick() {
     return $("//span[contains(text(),'Media Library')]");
   }
 
-   get UI_nameML() {
+  get UI_nameML() {
     return $("//label[contains(text(),'Name')]");
   }
 
-   get UI_allText() {
+  get UI_allText() {
     return $("//label[contains(text(),'Alt Text')]");
   }
 
-   get UI_captionML() {
+  get UI_captionML() {
     return $("//label[contains(text(),'Caption')]");
   }
 
-   get UI_descriptionML() {
+  get UI_descriptionML() {
     return $("//label[contains(text(),'Description')]");
   }
 
-   get UI_AllTabML() {
+  get UI_AllTabML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[1]");
   }
 
-   get UI_imagML() {
+  get UI_imagML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[2]");
   }
 
-   get UI_VideosML() {
+  get UI_VideosML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[3]");
   }
 
-   get UI_DocsML() {
+  get UI_DocsML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[4]");
   }
 
-   get UI_miceML() {
+  get UI_miceML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[5]");
   }
 
-   get UI_editIcon() {
+  get UI_editIcon() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/*[2]");
   }
-   get UI_deleteIcon() {
+  get UI_deleteIcon() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/*[3]");
   }
 
-   get UI_paginationML() {
+  get UI_paginationML() {
     return $("(//button[@class='chakra-tabs__tab css-1vrgtg3'])[5]");
   }
 
@@ -176,76 +176,122 @@ class UILocator {
 
 ----------------------------------------------------------------- */
 
-get UI_authorClick() {
-  return $("//span[contains(text(),'Author')]");
-}
+  get UI_authorClick() {
+    return $("//span[contains(text(),'Author')]");
+  }
 
-get UI_searchAuthor() {
-  return $('//input[@class="chakra-input css-1x13kex"]');
-}
-get UI_createNewAuthor() {
-  return $('//a[@href="/admin/author/create"]');
-}
+  get UI_searchAuthor() {
+    return $('//input[@class="chakra-input css-1x13kex"]');
+  }
+  get UI_createNewAuthor() {
+    return $('//a[@href="/admin/author/create"]');
+  }
 
-get UI_nameAuthor() {
-  return $("//th[contains(text(),'NAME')]");
-}
+  get UI_nameAuthor() {
+    return $("//th[contains(text(),'NAME')]");
+  }
 
-get UI_emailAuthor() {
-  return $("//th[contains(text(),'EMAIL')]");
-}
+  get UI_emailAuthor() {
+    return $("//th[contains(text(),'EMAIL')]");
+  }
 
-get UI_addedOnAuthor() {
-  return $("//th[contains(text(),'ADDED ON')]");
-}
+  get UI_addedOnAuthor() {
+    return $("//th[contains(text(),'ADDED ON')]");
+  }
 
-get UI_socialLinkAuthor() {
-  return $("//th[contains(text(),'SOCIAL LINKS')]");
-}
+  get UI_socialLinkAuthor() {
+    return $("//th[contains(text(),'SOCIAL LINKS')]");
+  }
 
-get UI_detailsAuthor() {
-  return $("//th[contains(text(),'DETAILS')]");
-}
+  get UI_detailsAuthor() {
+    return $("//th[contains(text(),'DETAILS')]");
+  }
 
-get UI_activeAuthor() {
-  return $("//th[contains(text(),'ACTIVE')]");
-}
+  get UI_activeAuthor() {
+    return $("//th[contains(text(),'ACTIVE')]");
+  }
 
 
-get UI_nameAuthorField() {
-  return $('//input[@name="name"]');
-}
-get UI_emailAuthorField() {
-  return $('//input[@name="authorEmail"]');
-}
-get UI_facebookLinkAuthor() {
-  return $('//input[@name="facebookLink"]');
-}
-get UI_instagramAuthor() {
-  return $('//input[@name="instagramLink"]');
-}
-get UI_twitterAuthor() {
-  return $('//input[@name="twitterLink"]');
-}
-get UI_youtubeAuthor() {
-  return $('//input[@name="youtubeLink"]');
-}
-get UI_linkedinAuthor() {
-  return $('//input[@name="linkedInLink"]');
-}
-get UI_uploadAuthor() {
-  return $('//button[@name="authorImage"]');
-}
-get UI_saveUploadAuthor() {
-  return $('//button[@class="chakra-button css-1mci4gx"]');
-}
-get UI_authorDetailsAuthor() {
-  return $('//textarea[@name="authorDetails"]');
-}
-get UI_saveAuthor() {
-  return $('//button[@class="chakra-button css-wgslge"]');
-}
+  get UI_nameAuthorField() {
+    return $("//label[contains(text(),' Name ')]");
+  }
+  get UI_emailAuthorField() {
+    return $("//label[contains(text(),' Email ')]");
+  }
+  get UI_facebookLinkAuthor() {
+    return $('//input[@name="facebookLink"]');
+  }
+  get UI_instagramAuthor() {
+    return $('//input[@name="instagramLink"]');
+  }
+  get UI_twitterAuthor() {
+    return $('//input[@name="twitterLink"]');
+  }
+  get UI_youtubeAuthor() {
+    return $('//input[@name="youtubeLink"]');
+  }
+  get UI_linkedinAuthor() {
+    return $('//input[@name="linkedInLink"]');
+  }
+  get UI_uploadAuthor() {
+    return $('//button[@name="authorImage"]');
+  }
+  get UI_saveUploadAuthor() {
+    return $('//button[@class="chakra-button css-1mci4gx"]');
+  }
 
+  get UI_authorImageAuthor() {
+    return $("//p[contains(text(),'Author Image')]");
+  }
+  get UI_authorDetailsAuthor() {
+    return $("//label[contains(text(),'Author Details')]");
+  }
+  get UI_saveAuthor() {
+    return $('//button[@class="chakra-button css-wgslge"]');
+  }
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Tag  ----------------
+            
+     ----------------------------------------------------------------- */
+
+
+  get UI_tagClick() {
+    return $('//*[@id="root"]/main/div/div[1]/ul/div/div[1]/li[3]/a[2]/div/div');
+  }
+
+  get UI_createNewTag(){
+    return $('//a[@href="/admin/tag/create"]');
+  }
+  get UI_searchTag() {
+    return $('//input[@class="chakra-input css-1x13kex"]');
+  }
+  get UI_tagNameTag() {
+    return $("//th[contains(text(),'Tag Name')]");
+  }
+  get UI_tagTypeTag() {
+    return $("//th[contains(text(),'Tag Type')]");
+  }
+  get UI_paginationTag() {
+    return $('//div[@class="css-2imjyh"]');
+  }
+
+  get UI_nameTag() {
+    return $("//label[contains(text(),' Name ')]");
+  }
+  get UI_selectTypeTagTag() {
+    return $('//*[@id="root"]/main/div/div[2]/div[2]/div/form/div[2]/div/p');
+  }
+  get UI_blogTypeTag() {
+    return $("//span[contains(text(),'Blog Type')]");
+  }
+  get UI_productTypeTag() {
+    return $("//span[contains(text(),'Product Type')]");
+  }
+  get UI_saveTag() {
+    return $("//button[contains(text(),'Save')]");
+  }
 
 }
 export default UILocator;

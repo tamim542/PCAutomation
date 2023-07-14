@@ -1,11 +1,11 @@
 import UI_Blog from '../../pageobjects/Locators/UI_Locators.js';
-import Utilities from '../../pageobjects/Utilities/Utilities.js';
-describe(('Sites automation'), () => {
+import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
+describe(('Blog automation'), () => {
     const uiBlog = new UI_Blog();
     const utilities = new Utilities();
 
 
-    it(('Sites, Page automation'), async () => {
+    it(('Blog, Page automation'), async () => {
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
         await browser.url('https://abc-5021.pc-staging.com/admin');
@@ -65,80 +65,73 @@ describe(('Sites automation'), () => {
         console.log('Active Lebel Text::===', activeText);
         await expect(uiBlog.UI_activeAuthor).toHaveText("ACTIVE");
 
-        await uiBlog.UI_authorClick.click();
+        await uiBlog.UI_createNewAuthor.click();
 
-        // await expect(uiBlog.UI_nameAuthorField).toExist();
-        // await expect(uiBlog.UI_emailAuthorField).toExist();
-        // await expect(uiBlog.UI_facebookLinkAuthor).toExist();
-        // await expect(uiBlog.UI_instagramAuthor).toExist();
-        // await expect(uiBlog.UI_twitterAuthor).toExist();
-        // await expect(uiBlog.UI_youtubeAuthor).toExist();
+        await expect(uiBlog.UI_nameAuthorField).toExist();
+        await expect(uiBlog.UI_emailAuthorField).toExist();
+        await expect(uiBlog.UI_facebookLinkAuthor).toExist();
+        await expect(uiBlog.UI_instagramAuthor).toExist();
+        await expect(uiBlog.UI_twitterAuthor).toExist();
+        await expect(uiBlog.UI_youtubeAuthor).toExist();
 
-        // const saveAuthorText = await uiBlog.UI_saveAuthor.getText();
-        // console.log('Save Lebel Text::===', saveAuthorText);
-        // await expect(uiBlog.UI_saveAuthor).toHaveText("Save");
+        const authorImageText = await uiBlog.UI_authorImageAuthor.getText();
+        console.log('Author Image Lebel Text::===', authorImageText);
+        await expect(uiBlog.UI_authorImageAuthor).toHaveText("Author Image");
+
+        const authorDetailsText = await uiBlog.UI_authorDetailsAuthor.getText();
+        console.log('Author Details Lebel Text::===', authorDetailsText);
+        await expect(uiBlog.UI_authorDetailsAuthor).toHaveText("Author Details");
+
+        const saveAuthorText = await uiBlog.UI_saveAuthor.getText();
+        console.log('Save Lebel Text::===', saveAuthorText);
+        await expect(uiBlog.UI_saveAuthor).toHaveText("Save");
 
 
         /* -----------------------------------------------------------------
             
-                  -------------  media library  ----------------
+                  -------------  Tag  ----------------
            
          ----------------------------------------------------------------- */
 
-        // (await uiSite.UI_mediaLibraryClick).click();
+         await uiBlog.UI_tagClick.click();
 
-        // const nameML = await uiSite.UI_nameML.getText();
-        // console.log('Name Lebel Text::===', nameML);
-        // await expect(uiSite.UI_nameML).toHaveText("Name");
+        const createNewTextTag = await uiBlog.UI_createNewTag.getText();
+        console.log('Create New Text::===', createNewTextTag);
+        await expect(uiBlog.UI_createNewTag).toHaveText("Create new");
 
-        // const allTextML = await uiSite.UI_allText.getText();
-        // console.log('All Text Lebel Text::===', allTextML);
-        // await expect(uiSite.UI_allText).toHaveText("Alt Text");
+        await expect(uiBlog.UI_searchTag).toExist();
 
-        // const captionML = await uiSite.UI_captionML.getText();
-        // console.log('Caption Lebel Text::===', captionML);
-        // await expect(uiSite.UI_captionML).toHaveText("Caption");
+        const tagNAmeTextTag = await uiBlog.UI_tagNameTag.getText();
+        console.log('Tag Name Text::===', tagNAmeTextTag);
+        await expect(uiBlog.UI_tagNameTag).toHaveText("TAG NAME");
 
-        // const descriptionML = await uiSite.UI_descriptionML.getText();
-        // console.log('Description Lebel Text::===', descriptionML);
-        // await expect(uiSite.UI_descriptionML).toHaveText("Description");
+        const tagTypeTextTag = await uiBlog.UI_tagTypeTag.getText();
+        console.log('Tag Type Text::===', tagTypeTextTag);
+        await expect(uiBlog.UI_tagTypeTag).toHaveText("TAG TYPE");
 
+        await expect(uiBlog.UI_paginationTag).toExist();
 
-        // await expect(uiSite.UI_AllTabML).toBeClickable();
-        // const allTabML = await uiSite.UI_AllTabML.getText();
-        // console.log('All Lebel Text::===', allTabML);
-        // await expect(uiSite.UI_AllTabML).toHaveText("All");
+        await uiBlog.UI_createNewTag.click();
 
+        const nameTextTag = await uiBlog.UI_nameTag.getText();
+        console.log('Name Text::===', nameTextTag);
+        await expect(uiBlog.UI_tagTypeTag).toHaveText("Name");
 
-        // await expect(uiSite.UI_imagML).toBeClickable();
-        // const imgML = await uiSite.UI_imagML.getText();
-        // console.log('Image Lebel Text::===', imgML);
-        // await expect(uiSite.UI_imagML).toHaveText("Image");
+        const selectTagTypeTextTag = await uiBlog.UI_selectTypeTagTag.getText();
+        console.log('Tag Type Text::===', selectTagTypeTextTag);
+        await expect(uiBlog.UI_selectTypeTagTag).toHaveText("Select a tag type :");
 
+    
+        const blogTypeTextTag = await uiBlog.UI_blogTypeTag.getText();
+        console.log('Tag Type Text::===', blogTypeTextTag);
+        await expect(uiBlog.UI_blogTypeTag).toHaveText("Blog Type");
 
-        // await expect(uiSite.UI_VideosML).toBeClickable();
-        // const videosML = await uiSite.UI_VideosML.getText();
-        // console.log('Videos Lebel Text::===', videosML);
-        // await expect(uiSite.UI_VideosML).toHaveText("Videos");
-
-
-        // await expect(uiSite.UI_DocsML).toBeClickable();
-        // const docsML = await uiSite.UI_DocsML.getText();
-        // console.log('Docs Lebel Text::===', docsML);
-        // await expect(uiSite.UI_DocsML).toHaveText("Docs");
+        const productTypeTextTag = await uiBlog.UI_productTypeTag.getText();
+        console.log('Tag Type Text::===', productTypeTextTag);
+        await expect(uiBlog.UI_productTypeTag).toHaveText("Product Type");
 
 
-        // await expect(uiSite.UI_miceML).toBeClickable();
-        // const miscML = await uiSite.UI_miceML.getText();
-        // console.log('Misc Lebel Text::===', miscML);
-        // await expect(uiSite.UI_miceML).toHaveText("Misc");
-
-        // await expect(uiSite.UI_editIcon).toBeClickable();
-        // await expect(uiSite.UI_deleteIcon).toBeClickable();
-
-        // await expect(uiSite.UI_paginationML).toExist();
-        // await expect(uiSite.UI_paginationML).toBeClickable();
-
+        
 
 
 
