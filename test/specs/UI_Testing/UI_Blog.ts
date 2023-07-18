@@ -115,20 +115,25 @@ describe(('Blog automation'), () => {
 
         const nameTextTag = await uiBlog.UI_nameTag.getText();
         console.log('Name Text::===', nameTextTag);
-        await expect(uiBlog.UI_tagTypeTag).toHaveText("Name");
+        await expect(uiBlog.UI_nameTag).toHaveText("Name");
 
-        const selectTagTypeTextTag = await uiBlog.UI_selectTypeTagTag.getText();
-        console.log('Tag Type Text::===', selectTagTypeTextTag);
-        await expect(uiBlog.UI_selectTypeTagTag).toHaveText("Select a tag type :");
+      
+        const selectTagType = await uiBlog.UI_selectTagType.getText();
+        console.log('Select a tag type  Text::===', selectTagType);
+        await expect(uiBlog.UI_selectTagType).toHaveText("Select a tag type :");
 
-    
-        const blogTypeTextTag = await uiBlog.UI_blogTypeTag.getText();
-        console.log('Tag Type Text::===', blogTypeTextTag);
+        const blogTypeTagText = await uiBlog.UI_blogTypeTag.getText();
+        console.log('Blog Type Text::===', blogTypeTagText);
         await expect(uiBlog.UI_blogTypeTag).toHaveText("Blog Type");
 
-        const productTypeTextTag = await uiBlog.UI_productTypeTag.getText();
-        console.log('Tag Type Text::===', productTypeTextTag);
+        const productTypeTag = await uiBlog.UI_productTypeTag.getText();
+        console.log('Product Type  Text::===', productTypeTag);
         await expect(uiBlog.UI_productTypeTag).toHaveText("Product Type");
+
+      
+
+
+        
 
 
         
@@ -136,4 +141,9 @@ describe(('Blog automation'), () => {
 
 
     })
+
+
+
+
+
 })

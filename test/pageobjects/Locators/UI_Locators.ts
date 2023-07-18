@@ -280,18 +280,21 @@ class UILocator {
   get UI_nameTag() {
     return $("//label[contains(text(),' Name ')]");
   }
-  get UI_selectTypeTagTag() {
-    return $('//*[@id="root"]/main/div/div[2]/div[2]/div/form/div[2]/div/p');
+
+  get UI_selectTagType(){
+    return $('//form//p[contains(text(), "Select a tag type :")]');
   }
-  get UI_blogTypeTag() {
+        
+  get UI_blogTypeTag(){
     return $("//span[contains(text(),'Blog Type')]");
-  }
-  get UI_productTypeTag() {
+    
+  }    
+   
+  get UI_productTypeTag(){
     return $("//span[contains(text(),'Product Type')]");
   }
-  get UI_saveTag() {
-    return $("//button[contains(text(),'Save')]");
-  }
+
+
 
 }
 export default UILocator;
