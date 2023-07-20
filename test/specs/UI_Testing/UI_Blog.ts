@@ -4,16 +4,23 @@ describe(('Blog automation'), () => {
     const uiBlog = new UI_Blog();
     const utilities = new Utilities();
 
+    before("Open App", async () => {
+        await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.maximizeWindow();
+    })
+
+     //-------------------------------------------------Blog UI Testing--------------------------------------------
 
     it(('Blog, Page automation'), async () => {
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
-        await browser.url('https://abc-5021.pc-staging.com/admin');
-        await browser.maximizeWindow();
+        
+        // await browser.url('https://abc-5021.pc-staging.com/admin');
+        // await browser.maximizeWindow();
 
         await utilities.Signin();
 
-        //-------------------------------------------------Blog UI Testing--------------------------------------------
+       
 
         const blogText = await uiBlog.UI_blogClick.getText();
         console.log('Blog Lebel Text::===', blogText);
@@ -21,11 +28,17 @@ describe(('Blog automation'), () => {
 
         await uiBlog.UI_blogClick.click();
 
+
+    })    
+
         /* -----------------------------------------------------------------
      
            -------------  Author  ----------------
     
       ----------------------------------------------------------------- */
+
+      it(('Author Of Blog'), async()=>{
+
         const authorText = await uiBlog.UI_authorClick.getText();
         console.log('Author Lebel Text::===', authorText);
         await expect(uiBlog.UI_authorClick).toHaveText("Author");
@@ -86,14 +99,21 @@ describe(('Blog automation'), () => {
         console.log('Save Lebel Text::===', saveAuthorText);
         await expect(uiBlog.UI_saveAuthor).toHaveText("Save");
 
+    })
 
-        /* -----------------------------------------------------------------
+    /* -----------------------------------------------------------------
             
                   -------------  Tag  ----------------
            
          ----------------------------------------------------------------- */
 
-         await uiBlog.UI_tagClick.click();
+    it(('tag fo blog'), async()=>{
+
+        const tagText = await uiBlog.UI_tagClick.getText();
+        console.log('Tag Lebel Text::===', tagText);
+        await expect(uiBlog.UI_tagClick).toHaveText("Tag");
+
+        await uiBlog.UI_tagClick.click();
 
         const createNewTextTag = await uiBlog.UI_createNewTag.getText();
         console.log('Create New Text::===', createNewTextTag);
@@ -130,13 +150,108 @@ describe(('Blog automation'), () => {
         console.log('Product Type  Text::===', productTypeTag);
         await expect(uiBlog.UI_productTypeTag).toHaveText("Product Type");
 
-      
+        const saveTagText = await uiBlog.UI_saveTag.getText();
+        console.log('save Text::===', saveTagText);
+        await expect(uiBlog.UI_saveTag).toHaveText("Save");
+
+        await browser.pause(2000);
 
 
-        
+
+    })
 
 
-        
+
+     /* -----------------------------------------------------------------
+             
+                   -------------  Post  ----------------
+            
+     ----------------------------------------------------------------- */
+
+
+    it(('Post of Blog'), async()=>{
+
+        const postText = await uiBlog.UI_post.getText();
+        console.log('Post Lebel Text::===', postText);
+        await expect(uiBlog.UI_post).toHaveText("Post");
+
+        await uiBlog.UI_post.click();
+
+
+        const titlePostText = await uiBlog.UI_titlePost.getText();
+        console.log('Title Post Text Type  Text::===', titlePostText);
+        await expect(uiBlog.UI_titlePost).toHaveText("TITLE");
+
+        const createdPostText = await uiBlog.UI_createdPost.getText();
+        console.log('Created Post Type  Text::===', createdPostText);
+        await expect(uiBlog.UI_createdPost).toHaveText("CREATED");
+
+        const updatePostText = await uiBlog.UI_updatePost.getText();
+        console.log('Update Post Text Type  Text::===', updatePostText);
+        await expect(uiBlog.UI_updatePost).toHaveText("UPDATED");
+
+        const excerptPostText = await uiBlog.UI_excerptPost.getText();
+        console.log('Excerpt Post Text Type  Text::===', excerptPostText);
+        await expect(uiBlog.UI_excerptPost).toHaveText("EXCERPT");
+
+        const publishPostText = await uiBlog.UI_publishPost.getText();
+        console.log('Product Type  Text::===', publishPostText);
+        await expect(uiBlog.UI_publishPost).toHaveText("PUBLISH");
+
+
+        await uiBlog.UI_createNewPost.click();
+
+        const titleInsidePOstText = await uiBlog.UI_titleInsidePost.getText();
+        console.log('Title Text::===', titleInsidePOstText);
+        await expect(uiBlog.UI_titleInsidePost).toHaveText("Title*");
+       
+        const blogslugPostText = await uiBlog.UI_blogSlugPost.getText();
+        console.log('Blog Slug Text::===', blogslugPostText);
+        await expect(uiBlog.UI_blogSlugPost).toHaveText("Blog slug");
+
+        const featureImagePostText = await uiBlog.UI_featureImagePost.getText();
+        console.log('Feature Image Post Text::===', featureImagePostText);
+        await expect(uiBlog.UI_featureImagePost).toHaveText("Feature Image*");
+
+        const excerpInsidetPostText = await uiBlog.UI_excerptInsidePost.getText();
+        console.log('Excerpt Post Text::===', excerpInsidetPostText);
+        await expect(uiBlog.UI_excerptInsidePost).toHaveText("Excerpt*");
+
+        const tagsPostText = await uiBlog.UI_tagsPost.getText();
+        console.log('Tags Post Text::===', tagsPostText);
+        await expect(uiBlog.UI_tagsPost).toHaveText("Tags");
+
+        const primaryAuthorPostText = await uiBlog.UI_primaryAuthorPost.getText();
+        console.log('Primary Author Post Text::===', primaryAuthorPostText);
+        await expect(uiBlog.UI_primaryAuthorPost).toHaveText("Primary Author*");
+
+        const focusKeyPhrasePostText = await uiBlog.UI_focusKeyphrasePost.getText();
+        console.log('Focus Keyphrase Post Text::===', focusKeyPhrasePostText);
+        await expect(uiBlog.UI_focusKeyphrasePost).toHaveText("Focus Keyphrase");
+
+        const metaDescriptionPostText = await uiBlog.UI_metaDescriptionPost.getText();
+        console.log('Meta Description Post Text::===', metaDescriptionPostText);
+        await expect(uiBlog.UI_metaDescriptionPost).toHaveText("Meta Description");
+
+        const seoReportPOstText = await uiBlog.UI_seoReportPost.getText();
+        console.log('seoReportPost Post Text::===', seoReportPOstText);
+        await expect(uiBlog.UI_seoReportPost).toHaveText("SEO Report");
+
+        await expect(uiBlog.UI_seoReportPost).toBeClickable();
+
+        const QuickPreviewPostText = await uiBlog.UI_quickPreviewPost.getText();
+        console.log('Quick Preview Post Text::===', QuickPreviewPostText);
+        await expect(uiBlog.UI_quickPreviewPost).toHaveText("Quick Preview");
+
+        await expect(uiBlog.UI_quickPreviewPost).toBeClickable();
+
+        const savePostText = await uiBlog.UI_savePost.getText();
+        console.log('Save Post Text::===', savePostText);
+        await expect(uiBlog.UI_savePost).toHaveText("Save");
+
+        await expect(uiBlog.UI_savePost).toBeClickable();
+
+
 
 
 
@@ -146,4 +261,12 @@ describe(('Blog automation'), () => {
 
 
 
-})
+
+
+
+
+
+        
+
+
+    })

@@ -293,6 +293,192 @@ class UILocator {
   get UI_productTypeTag(){
     return $("//span[contains(text(),'Product Type')]");
   }
+  get UI_saveTag(){
+    return $("//button[contains(text(),'Save')]");
+  }
+
+   /* -----------------------------------------------------------------
+             
+                   -------------  Post  ----------------
+            
+     ----------------------------------------------------------------- */
+
+  get UI_post(){
+    return $("//span[contains(text(),'Post')]");
+  }
+  get UI_searchPost(){
+    return $('//input[@class="chakra-input css-1sd02p2"]');
+  }
+  get UI_titlePost(){
+    return $("//th[contains(text(),'Title')]");
+  }
+  get UI_createdPost(){
+    return $("//th[contains(text(),'Created')]");
+  }
+  get UI_updatePost(){
+    return $("//th[contains(text(),'Updated')]");
+  }
+  get UI_excerptPost(){
+    return $("//th[contains(text(),'Excerpt')]");
+  }
+  get UI_publishPost(){
+    return $("//th[contains(text(),'Publish')]");
+  }
+
+
+  get UI_createNewPost(){
+    return $('//a[@href="/admin/blog/create"]');
+  }
+
+  get UI_titleInsidePost(){
+    return $("//label[contains(text(),'Title')]");
+  }
+  get UI_blogSlugPost(){
+    return $("//p[contains(text(),'Blog slug')]");
+  }
+  get UI_featureImagePost(){
+    return $("//p[contains(text(),'Feature Image')]");
+  }
+  get UI_excerptInsidePost(){
+    return $("//label[contains(text(),'Excerpt')]");
+  }
+  get UI_tagsPost(){
+    return $("//label[contains(text(),'Tags')]");
+  }
+  get UI_primaryAuthorPost(){
+    return $("//label[contains(text(),'Primary Author')]");
+  }
+  get UI_focusKeyphrasePost(){
+    return $("//p[contains(text(),'Focus Keyphrase')]");
+  }
+  get UI_metaDescriptionPost(){
+    return $("//label[contains(text(),'Meta Description')]");
+  }
+  get UI_seoReportPost(){
+    return $("//button[contains(text(),'SEO Report')]");
+  }
+  get UI_quickPreviewPost(){
+    return $("//button[contains(text(),'Quick Preview')]");
+  }
+  get UI_savePost(){
+    return $("//button[contains(text(),'Save')]");
+  }
+
+
+
+  //-----------------------------------------------------------OPeration UI Testing-----------------------------------------------
+
+
+
+
+  get UI_operation(){
+    return $("//span[contains(text(),'Operation')]");
+  }
+
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Users  ----------------
+            
+  ----------------------------------------------------------------- */
+
+  get UI_usersOperation(){
+    return $("//span[contains(text(),'Users')]");
+  }
+
+  get UI_firstNameUsers(){
+    return $("//th[contains(text(),'First Name')]");
+  }
+  get UI_lastNameUsers(){
+    return $("//th[contains(text(),'Last Name')]");
+  }
+  get UI_emailUsers(){
+    return $("//th[contains(text(),'Email')]");
+  }
+  get UI_phoneUsers(){
+    return $("//th[contains(text(),'Phone')]");
+  }
+  get UI_createNewUsers(){
+    return $("//a[contains(text(),'Create new')]");
+  }
+  get UI_firstNameInsideUsers(){
+    return $("//label[contains(text(),'First Name')]");
+  }
+  get UI_lastNameInsideUsers(){
+    return $("//label[contains(text(),'Last name')]");
+  }
+  get UI_emailInsideUsers(){
+    return $("//label[contains(text(),'Email')]");
+  }
+  get UI_phoneInsideUsers(){
+    return $("//label[contains(text(),'Phone Number')]");
+  }
+  get UI_passwordUsers(){
+    return $("//label[contains(text(),'Password')]");
+  }
+  get UI_confirmPasswordUsers(){
+    return $("//label[contains(text(),'Confirm Password')]");
+  }
+  get UI_saveUsers(){
+    return $("//button[contains(text(),'Save')]");
+  }
+
+
+
+  //-----------------------------------------------------------Website Setting UI Testing-----------------------------------------------
+
+
+  get UI_websiteSetting(){
+    return $("//span[contains(text(),'Website Settings')]");
+  }
+
+
+  
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Theme  ----------------
+            
+  ----------------------------------------------------------------- */
+
+
+
+
+  get UI_themeWebsiteSetting(){
+    return $("//span[contains(text(),'Theme')]");
+  }
+
+  get UI_themeSettingTheme(){
+    return $("//p[contains(text(),'Theme Settings')]");
+  }
+  get UI_logoTheme(){
+    return $("//p[contains(text(),'Logo')]");
+  }
+  get UI_favIconTheme(){
+    return $("//p[contains(text(),'Fav Icon')]");
+  }
+  get UI_webSiteColorTheme(){
+    return $("//p[contains(text(),'Website Colors')]");
+  }
+  get UI_primaryColorTheme(){
+    return $("//label[contains(text(),'Primary Color')]");
+  }
+  get UI_secondaryColorTheme(){
+    return $("//label[contains(text(),'Secondary Color')]");
+  }
+  get UI_accentColorTheme(){
+    return $("//label[contains(text(),'Accent Color')]");
+  }
+  get UI_siteFontTheme(){
+    return $("//label[contains(text(),'Site Font')]");
+  }
+  get UI_showSigninPageTheme(){
+    return $("//span[contains(text(),'Show Signin Page')]");
+  }
+  get UI_saveTheme(){
+    return $("//button[contains(text(),'Save')]");
+  }
+
 
 
 
