@@ -24,7 +24,7 @@ describe(('registration with subscription'), () => {
         await subsReg.confirmPassword.setValue("1234567891");
         await browser.takeScreenshot();
         await subsReg.saveButtonReg.click();
-        await browser.pause(3000);
+        await browser.pause(4000);
         await browser.takeScreenshot();
 
 

@@ -481,6 +481,177 @@ class UILocator {
 
 
 
+  /* -----------------------------------------------------------------
+             
+                   -------------  Profile  ----------------
+            
+  ----------------------------------------------------------------- */
+
+
+
+  get UI_profileWebsiteSetting(){
+    return $("//span[contains(text(),'Profile')]");
+  }
+
+  get UI_profileSettingsProfile(){
+    return $("//p[contains(text(),'Profile Settings')]");
+  }
+  get UI_nameProfile(){
+    return $("//label[contains(text(),'Name')]");
+  }
+  get UI_emailProfile(){
+    return $("//label[contains(text(),'Email')]");
+  }
+  get UI_phoneProfile(){
+    return $("//label[contains(text(),'Phone')]");
+  }
+  get UI_profileImageProfile(){
+    return $("//p[contains(text(),'Profile Image')]");
+  }
+  get UI_industryTypeProfile(){
+    return $("//label[contains(text(),'Industry Type')]");
+  }
+  get UI_websiteNameProfile(){
+    return $("//label[contains(text(),'Website Name')]");
+  }
+  get UI_businessAddressProfile(){
+    return $("//label[contains(text(),'Business Address')]");
+  }
+  get UI_saveProfile(){
+    return $("//button[contains(text(),'Save')]");
+  }
+
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Domain  ----------------
+            
+  ----------------------------------------------------------------- */
+
+  get UI_domainWebsiteSetting(){
+    return $("//span[contains(text(),'Domain')]");
+  }
+  get UI_connectCustomDomain(){
+    return $("//h2[contains(text(),'Connect your custom domain here.')]");
+  }
+  get UI_yourFreeDomain(){
+    return $("//label[contains(text(),'Your Free Domain')]");
+  }
+  get UI_customDomainCofigDomain(){
+    return $("//label[contains(text(),'Custom Domain Config ')]");
+  }
+  get UI_typeDomain(){
+    return $("//th[contains(text(),'Type')]");
+  }
+  get UI_hostDomain(){
+    return $("//th[contains(text(),'Host')]");
+  }
+  get UI_valueDomain(){
+    return $("//th[contains(text(),'Value')]");
+  }
+  get UI_ttlDomain(){
+    return $("//th[contains(text(),'TTL')]");
+  }
+  
+  get UI_saveDomain(){
+    return $("//button[contains(text(),'Save')]");
+  }
+  
+
+
+  //-----------------------------------------------------------Billing Setting UI Testing-----------------------------------------------
+
+
+  
+  get UI_billing(){
+    return $("//span[contains(text(),'Billing')]");
+  }
+  
+
+  
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Card  ----------------
+            
+  ----------------------------------------------------------------- */
+
+
+  get UI_cardBilling(){
+    return $("//span[contains(text(),'Card')]");
+  }
+
+  get UI_cardHolderCard(){
+    return $("//th[contains(text(),'Card Holder')]");
+  }
+  get UI_emailCard(){
+    return $("//th[contains(text(),'Email')]");
+  }
+  get UI_last4DigitCard(){
+    return $("//th[contains(text(),'Last 4 digit')]");
+  }
+  get UI_expiresOnCard(){
+    return $("//th[contains(text(),'Expires On')]");
+  }
+  get UI_createNewCard(){
+    return $("//a[contains(text(),'Create new')]");
+  }
+
+
+
+  //-----------------------------------------------------------Configuration UI Testing-----------------------------------------------
+
+
+
+  get UI_configuration(){
+    return $("//span[contains(text(),'Configuration')]");
+  }
+
+  
+  
+
+  /* -----------------------------------------------------------------
+             
+                   -------------  Chat Config  ----------------
+            
+  ----------------------------------------------------------------- */
+
+
+  get UI_chatConfigConfiguration(){
+    return $("(//span[contains(text(),'Chat Config')])[1]");
+  }
+  
+  get UI_chatConfigInsideConfiguration(){
+    return $("(//span[contains(text(),'Chat Config')])[2]");
+  }
+  get UI_dropdownChatConfig(){
+    return $('//select[@name="option"]');
+  }
+  
+  get UI_twaktoChatConfig(){
+    return $("//p[contains(text(),'TWAKTO')]");
+  }
+  get UI_propertyIdChatConfig(){
+    return $("//label[contains(text(),'Property ID')]");
+  }
+  get UI_chatIdChatConfig(){
+    return $("//label[contains(text(),'Chat ID')]");
+  }
+  get UI_saveChatConfig(){
+    return $("//button[contains(text(),'Save')]");
+  }
+  
+
+
+
+
+  
+
+
+
+
+
+
 
 }
 export default UILocator;

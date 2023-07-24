@@ -153,7 +153,7 @@ class LocatorHome {
   }
 
   get saveButtonReg() {
-    return $("//input[@id='field-10']");
+    return $("//button[contains(text(),'Save')]");
   }
 
 
