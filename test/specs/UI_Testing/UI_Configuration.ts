@@ -70,6 +70,28 @@ describe(('Operation UI Automation'), () => {
     })
 
 
+    /* -----------------------------------------------------------------
+ 
+       -------------  Google Analytics  ----------------
+ 
+     ----------------------------------------------------------------- */
+
+    it(('Google Analytics UI Of Configuration'), async () => {
+
+        
+        
+        const chatConfigText = await uiConfiguration.UI_chatConfigConfiguration.getText();
+        console.log('Chat Config Lebel Text::===', chatConfigText);
+        await expect(uiConfiguration.UI_chatConfigConfiguration).toHaveText("Chat Config");
+
+        await uiConfiguration.UI_chatConfigConfiguration.click();
+
+
+
+
+    })
+
+
 
 
 

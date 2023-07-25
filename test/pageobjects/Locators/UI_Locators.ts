@@ -153,7 +153,7 @@ class UILocator {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/*[2]");
   }
   get UI_deleteIcon() {
-    return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/*[3]");
+    return $("//button[contains(text(),'Delete All Unused')]");
   }
 
   get UI_paginationML() {
