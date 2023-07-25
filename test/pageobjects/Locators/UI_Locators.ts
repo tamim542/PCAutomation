@@ -644,8 +644,134 @@ class UILocator {
 
 
 
+   /* -----------------------------------------------------------------
+             
+                   -------------  Google Analytics  ----------------
+            
+  ----------------------------------------------------------------- */
 
   
+  get UI_googleAnalyticsConfiguration(){
+    return $("//span[contains(text(),'Google Analytics')]");
+  }
+  
+  get UI_googleAnalyticsInsideConfiguration(){
+    return $("//p[contains(text(),'Google Analytics')]");
+  }
+  
+  get UI_googleAnalytics4MeasurementIDgoogleAnalytics(){
+    return $("//p[contains(text(),'Google Analytics 4 Measurement ID')]");
+  }
+  get UI_googleTagManagerCodeGAnalytics(){
+    return $("//p[contains(text(),'Google Tag Manager Code')]");
+  }
+  get UI_googleAnalytics4ActiveGAnalytics(){
+    return $("//p[contains(text(),'Google Analytics 4 Active')]");
+  }
+  get UI_googleTagManagerActiveGAnalytics(){
+    return $("//p[contains(text(),'Google Tag Manager Active')]");
+  }
+  
+
+
+  /* -----------------------------------------------------------------
+             
+                   ------------- Mail Config  ----------------
+            
+  ----------------------------------------------------------------- */
+
+
+
+  get UI_mailConfigConfiguration(){
+    return $("//span[contains(text(),'Mail Config')]");
+  }
+  
+  get UI_connectionInformationMailConfig(){
+    return $("//span[contains(text(),'Mail Config')]");
+  }
+  get UI_smtpServerMailConfig(){
+    return $("//label[contains(text(),'SMTP Server')]");
+  }
+  get UI_smtpPortMailConfig(){
+    return $("//label[contains(text(),'SMTP Port')]");
+  }
+  
+  get UI_emailAddressMailConfig(){
+    return $("//label[contains(text(),'Email address')]");
+  }
+  get UI_passwordMailConfig(){
+    return $("//label[contains(text(),'Password')]");
+  }
+  
+
+
+  
+    /* -----------------------------------------------------------------
+ 
+       ------------- Google Search Console  ----------------
+ 
+     ----------------------------------------------------------------- */
+
+    
+     get UI_GSCConfiguration(){
+      return $("//span[contains(text(),'Google search Console')]");
+    }
+     get UI_contentGSC(){
+      return $("//label[contains(text(),'Content')]");
+    }
+     get UI_activeGSC(){
+      return $("//label[contains(text(),'Active')]");
+    }
+     get UI_saveGSC(){
+      return $("//button[contains(text(),'Save')]");
+    }
+    
+   
+
+    /* -----------------------------------------------------------------
+ 
+       ------------- Google AdSense  ----------------
+ 
+     ----------------------------------------------------------------- */
+
+
+     get UI_googleAdSenseConfiguration(){
+      return $("//span[contains(text(),'Google AdSense')]");
+    }
+     get UI_clientCodeGoogleAdSense(){
+      return $("//p[contains(text(),'Client Code')]");
+    }
+     get UI_activeGoogleAdSense(){
+      return $("//p[contains(text(),'Active')]");
+    }
+     get UI_saveGoogleAdSense(){
+      return $("//button[contains(text(),'Save')]");
+    }
+    
+
+
+
+    /* -----------------------------------------------------------------
+ 
+       ------------- Pinterest Verification  ----------------
+ 
+     ----------------------------------------------------------------- */
+
+
+     get UI_PVConfiguration(){
+      return $("//span[contains(text(),'Pinterest Verification')]");
+    }
+     get UI_contentPV(){
+      return $("//label[contains(text(),'Content')]");
+    }
+     get UI_activePV(){
+      return $("//label[contains(text(),'Active')]");
+    }
+    
+     get UI_savePV(){
+      return $("//button[contains(text(),'Save')]");
+    }
+    
 
 
 
