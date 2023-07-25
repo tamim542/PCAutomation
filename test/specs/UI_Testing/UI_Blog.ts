@@ -1,6 +1,6 @@
 import UI_Blog from '../../pageobjects/Locators/UI_Locators.js';
 import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
-describe(('Blog automation'), () => {
+describe(('Blog Page UI Automation'), () => {
     const uiBlog = new UI_Blog();
     const utilities = new Utilities();
 
