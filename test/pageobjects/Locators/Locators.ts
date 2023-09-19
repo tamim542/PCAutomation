@@ -578,7 +578,7 @@ class LocatorHome {
   }
 
   get createNewFooterClick() {
-    return $('//*[@id="root"]/main/div/div[2]/div[2]/div/div/div[1]/button');
+    return $('//a[@href="/admin/builder/footer/create"]');
   }
   get pageNameFooter() {
     return $('//input[@placeholder="Enter name"]');
@@ -785,7 +785,7 @@ get upButton(){
 }
 
 
-// ---------------------------------------------- Page [AT0007] Blog -----------------------------------------------
+// ---------------------------------------------- Page [AT0007] Website Settings -----------------------------------------------
 
 
 get websiteSettingsClick(){
@@ -904,6 +904,15 @@ get domainClick(){
 }
 get customeDomain(){
   return $("//span[contains(text(),'Domain')]");
+}
+get connectDomain(){
+  return $("//button[contains(text(),'Connect Domain')]");
+}
+get upgradeDomain(){
+  return $("//button[contains(text(),'UPGRADE ')]");
+}
+get selectCard(){
+  return $("//td[contains(text(),'visa')]");
 }
 
 

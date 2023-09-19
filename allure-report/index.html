@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html dir="ltr">
+<html dir="ltr" lang="en">
 <head>
     <meta charset="utf-8">
     <title>Allure Report</title>
-    <link rel="favicon" href="favicon.ico?v=3">
+    <link rel="favicon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="plugins/screen-diff/styles.css">
+    <link rel="stylesheet" type="text/css" href="plugin/screen-diff/styles.css">
 </head>
 <body>
-<div id="alert"></div>
-<div id="content">
-    <span class="spinner">
-        <span class="spinner__circle"></span>
-    </span>
-</div>
-<div id="popup"></div>
-<script src="app.js"></script>
-    <script src="plugins/behaviors/index.js"></script>
-    <script src="plugins/packages/index.js"></script>
-    <script src="plugins/screen-diff/index.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWC4GKEYS"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FVWC4GKEYS');
-    gtag('allureVersion', '2.22.4')
-    gtag('reportUuid', '784f2707-ef95-4360-a76e-65352ff5a31a')
-</script>
+    <div id="alert"></div>
+    <div id="content">
+        <span class="spinner">
+            <span class="spinner__circle"></span>
+        </span>
+    </div>
+    <div id="popup"></div>
+    <script src="app.js"></script>
+    <script src="plugin/behaviors/index.js"></script>
+    <script src="plugin/screen-diff/index.js"></script>
+    <script src="plugin/packages/index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWC4GKEYS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FVWC4GKEYS');
+        gtag('allureVersion', 'dev')
+        gtag('reportUuid', 'e59dc2a5-c7af-4715-b307-9ef27b9fe2c7')
+    </script>
 </body>
 </html>

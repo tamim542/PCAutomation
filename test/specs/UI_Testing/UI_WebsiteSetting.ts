@@ -5,7 +5,8 @@ describe(('Operation UI Automation'), () => {
     const utilities = new Utilities();
 
     before("Open App", async () => {
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+        //await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL) //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
     })
 

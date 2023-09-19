@@ -5,13 +5,14 @@ describe(('Blog Page UI Automation'), () => {
     const utilities = new Utilities();
 
     before("Open App", async () => {
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+       // await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL) //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
     })
 
      //-------------------------------------------------Blog UI Testing--------------------------------------------
 
-    it(('Blog, Page automation'), async () => {
+    it(('Blog, Page UI automation'), async () => {
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
         
@@ -37,7 +38,7 @@ describe(('Blog Page UI Automation'), () => {
     
       ----------------------------------------------------------------- */
 
-      it(('Author Of Blog'), async()=>{
+      it(('Author UI Testing Of Blog'), async()=>{
 
         const authorText = await uiBlog.UI_authorClick.getText();
         console.log('Author Lebel Text::===', authorText);
@@ -107,7 +108,7 @@ describe(('Blog Page UI Automation'), () => {
            
          ----------------------------------------------------------------- */
 
-    it(('tag fo blog'), async()=>{
+    it(('Tag UI Testing fo Blog'), async()=>{
 
         const tagText = await uiBlog.UI_tagClick.getText();
         console.log('Tag Lebel Text::===', tagText);
@@ -169,7 +170,7 @@ describe(('Blog Page UI Automation'), () => {
      ----------------------------------------------------------------- */
 
 
-    it(('Post of Blog'), async()=>{
+    it(('Post UI Testing of Blog'), async()=>{
 
         const postText = await uiBlog.UI_post.getText();
         console.log('Post Lebel Text::===', postText);

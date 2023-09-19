@@ -7,7 +7,7 @@ describe(('Operation automation'), () => {
 
     it(('operation, Page automation'), async () => {
        
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL) //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
 
         await utilities.Signin();

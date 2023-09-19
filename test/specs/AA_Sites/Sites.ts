@@ -8,7 +8,7 @@ describe(('Sites automation'), () => {
   it(('Sites, Page automation'), async () => {
     //await browser.url('https://prolific-cloud.pc-staging.com/');
     // await browser.url('https://prolific1.pc-staging.com/signin');
-    await browser.url('https://abc-5021.pc-staging.com/admin');
+    await browser.url(utilities.URL); //'https://abc-5021.pc-staging.com/admin'
     await browser.maximizeWindow();
 
     await utilities.Signin();
@@ -69,18 +69,7 @@ describe(('Sites automation'), () => {
 
     await browser.pause(4000);
 
-    //  browser.addCommand("jsClick", function(this: ElementResult) {
-    //   this.then((site.preview) => {
-    //     browser.execute("arguments[0].click();", site.preview.value);
-    //   });
-    // });
-
-
-    //  (await site.preview).click();
-    //  (await site.importPage).click();
-
-
-
+    
 
 
     /* -----------------------------------------------------------------
@@ -128,8 +117,8 @@ describe(('Sites automation'), () => {
     ----------------------------------------------------------------- */
 
     await site.footerClick.click();
-    await site.leavePageConfirm.click();
-    await browser.pause(5000);
+   // await site.leavePageConfirm.click();
+    await browser.pause(3000);
     await site.createNewFooterClick.click();
     await site.pageNameFooter.setValue("Footer")
 

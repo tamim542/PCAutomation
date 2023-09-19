@@ -1,17 +1,18 @@
 import UI_Billing from '../../pageobjects/Locators/UI_Locators.js';
 import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
-describe(('Operation UI Automation'), () => {
+describe(('Billing UI Automation'), () => {
     const uiBilling = new UI_Billing();
     const utilities = new Utilities();
 
     before("Open App", async () => {
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+        //await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL) //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
     })
 
     //-------------------------------------------------Website Setting UI Testing--------------------------------------------
 
-    it(('Billing, Page automation'), async () => {
+    it(('Billing, Page UI Automation'), async () => {
 
         await utilities.Signin();
 
@@ -34,7 +35,7 @@ describe(('Operation UI Automation'), () => {
  
   ----------------------------------------------------------------- */
 
-    it(('Card Of Billing'), async () => {
+    it(('Card UI Of Billing'), async () => {
 
         const cardText = await uiBilling.UI_cardBilling.getText();
         console.log('Card Text::===', cardText);
@@ -44,7 +45,7 @@ describe(('Operation UI Automation'), () => {
 
         const cardHolderText = await uiBilling.UI_cardHolderCard.getText();
         console.log('Card Holder Text::===', cardHolderText);
-        await expect(uiBilling.UI_cardHolderCard).toHaveText("Card");
+        await expect(uiBilling.UI_cardHolderCard).toHaveText("CARD HOLDER");
 
 
 

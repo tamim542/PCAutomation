@@ -7,8 +7,8 @@ describe('signin Page load', () => {
     it('signin button click', async () => {
 
         //await browser.url('https://prolific-cloud.pc-staging.com/');
-       // await browser.url('https://prolific1.pc-staging.com/signin');
-       await browser.url('https://abc-5021.pc-staging.com/admin');
+       // await browser.url('https://prolific1.pc-staging.com/signin'); password: 123456789
+       await browser.url(utilities.URL); // 'https://abc-5021.pc-staging.com/admin'
        await browser.maximizeWindow();
         
        await utilities.Signin();

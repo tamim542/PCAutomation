@@ -1,4 +1,7 @@
 class UILocator {
+
+
+
   get registrationFrom() {
     return $("//section[@class='chakra-modal__content css-1kpz94o']");
   }

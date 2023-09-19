@@ -5,7 +5,7 @@ describe(('all configuration check'), () => {
     const configuration = new Configuration();
     const utilities = new Utilities();
     it(('configuration automate'), async () => {
-        await browser.url("https://abc-5021.pc-staging.com/admin");
+        await browser.url(utilities.URL) //"https://abc-5021.pc-staging.com/admin"
 
         await browser.maximizeWindow();
 

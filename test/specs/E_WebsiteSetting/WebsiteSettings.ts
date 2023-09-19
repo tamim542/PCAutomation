@@ -9,7 +9,7 @@ describe('website setting load', () => {
 
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL)  //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
 
         await utilities.Signin();
@@ -95,8 +95,11 @@ describe('website setting load', () => {
             -------------  Domain  ----------------
          
  ----------------------------------------------------------------- */
-         (await website.domainClick).click();
-         (await website.customDomain).setValue("pcStaging");
+         await website.domainClick.click();
+        // await website.customDomain.setValue("pcStaging");
+         await website.connectDomain.click();
+         await website.upgradeDomain.click();
+         await website.selectCard.click();
          await browser.pause(3000);
          await browser.takeScreenshot();
 

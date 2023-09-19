@@ -1,5 +1,7 @@
 class Utilities{
 
+    public URL:string = "https://abc-5021.pc-staging.com/admin"; 
+    
     public async Signin(){
 
         const emailSign = $("//input[@id='field-3']");

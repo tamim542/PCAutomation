@@ -8,7 +8,9 @@ describe(('Sites automation'), () => {
     it(('Sites, Page automation'), async () => {
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
-        await browser.url('https://abc-5021.pc-staging.com/admin');
+
+        //await browser.url('https://abc-5021.pc-staging.com/admin');
+        await browser.url(utilities.URL) //'https://abc-5021.pc-staging.com/admin'
         await browser.maximizeWindow();
 
         await utilities.Signin();
