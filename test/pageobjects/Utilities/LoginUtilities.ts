@@ -1,3 +1,6 @@
+import Locators from '../../pageobjects/Locators/Locators.js';
+const locator = new Locators();
+
 class Utilities{
 
     public URL:string = "https://abc-5021.pc-staging.com/admin"; 
@@ -38,14 +41,64 @@ class Utilities{
 
 
 
-    public async imgUpload(abc){
-        // const filePath = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\youtube.jpg'
-        // const remoteFilePath = await browser.uploadFile(filePath)
-        //console.log("=============",fileUpload);
-        // await browser.execute(() => {
-        //    // console.log("=============",fileUpload);
-        //     document.getElementById(abc).style.display = "block";
-        // })
+
+
+    
+
+    public URLDomain: string = "https://25-09-2023.prolificcloud.com/admin";
+
+    public async SigninForDomain() {
+
+        const emailSign = $("//input[@id='field-3']");
+        const passSign = $("//input[@id='field-4']");
+
+
+        await emailSign.setValue('tamim542.prolific+25-09-2023@gmail.com');
+        await passSign.setValue('12345678');
+
+        const firstNumber = await $("//span[@id='securityNumberOne']");
+        const twoNumber = $("//span[@id='securityNumberTwo']");
+
+        const captchaCode = $("//input[@id='field-5']");
+
+        let numOne = await firstNumber.getText();
+        let numTwo = await twoNumber.getText();
+
+        let oneInt = parseInt(numOne);
+        let twoInt = parseInt(numTwo);
+
+        let sum = oneInt + twoInt;
+
+        await captchaCode.setValue(sum);
+
+        await $("//button[contains(text(),'Log in')]").click();
+
+
     }
+
+
+
+
+    public async domainChange() {
+
+
+        const domain = await locator.getDomain.getAttribute('href');
+
+
+        if (domain == '//sqa3.theprolificcloud.com') {
+            await locator.enterDomain.setValue("sqa1.theprolificcloud.com");
+        } else {
+            await locator.enterDomain.setValue("sqa3.theprolificcloud.com");
+        }
+
+    }
+
+
+
+
+
+
+
+   
 }
 export default Utilities;

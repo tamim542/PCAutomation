@@ -5,7 +5,7 @@ describe(('registration with subscription'), () => {
     const subsReg = new LocatorSubsReg();
     it(('registration'), async () => {
 
-        await browser.url("https://pc-staging.com/"); //  https://prolific-cloud.pc-staging.com/
+        await browser.url("https://pc-staging.com/"); //  https://prolific-cloud.pc-staging.com/    https://testing1.pc-staging.com/admin
         await browser.maximizeWindow();
         await browser.takeScreenshot();
         await subsReg.pricingPlan.click();

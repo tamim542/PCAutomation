@@ -466,14 +466,17 @@ class LocatorHome {
   get createNew() {
     return $("//a[@class='chakra-link css-1krilld']");
   }
+  get pageName() {
+    return $("//input[@placeholder='Enter name']");
+  }
   get addSection() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/button[1]/*[1]");
   }
   get singleSection() {
-    return $("//body/div[7]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]");
+    return $("(//div[@class='chakra-stack css-rzdf1i'])[3]"); // //body/div[7]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]
   }
-  get icon() {
-    return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]/*[1]");
+  get eyeIcon() {
+    return $("//button[@class='chakra-button css-vocj4y']");
   }
 
 
@@ -488,8 +491,16 @@ class LocatorHome {
   }
 
   
+  
+
   get importPage(){
     return $("(//button[contains(text(),'Import')])[1]");
+  }
+  get pageSave(){
+    return $("(//button[contains(text(),'Save')])[1]");
+  }
+  get pagePublish(){
+    return $("(//button[contains(text(),'Publish')])[1]");
   }
 
  
@@ -513,7 +524,7 @@ class LocatorHome {
   ----------------------------------------------------------------- */
 
   get menuSetClick() {
-    return $("//body/div[@id='root']/main[1]/div[1]/div[1]/ul[1]/div[1]/div[1]/li[2]/a[2]/div[1]/div[1]/span[1]");
+    return $("//span[contains(text(),'Menu Set')]");
   }
 
   get leavePageConfirm() {
@@ -521,7 +532,7 @@ class LocatorHome {
   }
 
   get createNewMenuSet() {
-    return $("//a[@href='/admin/menuset/create']");
+    return $("//a[@href='/admin/menuset/create']"); // //a[@href='/admin/menuset/create']
   }
   get nameMenuSet() {
     return $("//input[@name='name']");
@@ -544,6 +555,9 @@ class LocatorHome {
   get addMenuMenuSet() {
     return $("//button[contains(text(),'Add to menu')]");
   }
+  get saveMenuMenuSet() {
+    return $("//button[contains(text(),'Save')]");
+  }
 
   /* -----------------------------------------------------------------
      
@@ -562,7 +576,10 @@ class LocatorHome {
     return $('//input[@placeholder="Enter name"]');
   }
   get headerSave(){
-    return $("(//button[contains(text(),'Save')])[1]");
+    return $("//button[contains(text(),'Save')]");
+  }
+  get headerPublish(){
+    return $('//*[@id="root"]/main/div/div[2]/div[2]/div/div[2]/div[2]/div[2]/button');
   }
 
 
@@ -584,6 +601,12 @@ class LocatorHome {
     return $('//input[@placeholder="Enter name"]');
   }
 
+  get footerSave(){
+    return $("//button[contains(text(),'Save')]");
+  }
+  get footePublish(){
+    return $("//button[contains(text(),'Publish')]");
+  }
   /* -----------------------------------------------------------------
  
        -------------  Media Library  ----------------
@@ -613,7 +636,7 @@ class LocatorHome {
     return $('//textarea[@name="description"]');
   }
   get saveMediaLibrary() {
-    return $('//button[@class="chakra-button css-qgd8zj"]');
+    return $("//button[contains(text(),'Save')]"); // //button[@class="chakra-button css-qgd8zj"]
   }
   // ---------------------------------------------- Page [AT0007] Blog -----------------------------------------------
 
@@ -914,6 +937,29 @@ get upgradeDomain(){
 get selectCard(){
   return $("//td[contains(text(),'visa')]");
 }
+
+
+
+
+/* -----------------------------------------------------------------
+     
+    -------------  Domain Update form production  ----------------
+ 
+----------------------------------------------------------------- */
+
+get getDomain(){
+  return $("//a[contains(text(),'Visit')]");
+}
+get enterDomain(){
+  return $("//input[@placeholder='Enter your domain']");
+}
+get saveCustomDomain(){
+  return $("//button[contains(text(),'Save')]");
+}
+
+
+
+
 
 
 
