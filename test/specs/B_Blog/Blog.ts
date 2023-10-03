@@ -1,10 +1,10 @@
 import Blog from '../../pageobjects/Locators/Locators.js';
 import Utilities from '../../pageobjects/Utilities/LoginUtilities.js';
 
-describe(('Sites automation'), () => {
+describe(('Blog Automation'), () => {
     const blog = new Blog();
     const utilities = new Utilities();
-    it(('Sites, Page automation'), async () => {
+    it(('Author, Page automation'), async () => {
         //await browser.url('https://prolific-cloud.pc-staging.com/');
         // await browser.url('https://prolific1.pc-staging.com/signin');
         await browser.url(utilities.URL); //'https://abc-5021.pc-staging.com/admin'

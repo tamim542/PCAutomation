@@ -14,8 +14,8 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    
-    
+
+
     //
     // ==================
     // Specify Test Files
@@ -33,8 +33,19 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
+        './test/specs/**/Registration.ts',
+        './test/specs/**/RegistrationWithSubscrip.ts',
+        './test/specs/**/SignIn.ts',
+        './test/specs/**/Sites.ts',
+        './test/specs/**/Blog.ts',
+        './test/specs/**/Operation.ts',
+        './test/specs/**/Configuration.ts',
+        './test/specs/**/WebsiteSettings.ts',
+        './test/specs/**/Billing.ts',
+        './test/specs/**/HomeTestCase.ts',
         './test/specs/**/DomainUpdate.ts'
         
+
     ],
     // Patterns to exclude.
     exclude: [
@@ -114,7 +125,7 @@ export const config: Options.Testrunner = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -153,8 +164,8 @@ export const config: Options.Testrunner = {
         disableWebdriverScreenshotsReporting: false,
     }]],
 
-    
-    
+
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -256,9 +267,9 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
 
-        if (error){
+        if (error) {
             browser.takeScreenshot();
         }
     },

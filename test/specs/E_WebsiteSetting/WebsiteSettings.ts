@@ -5,50 +5,50 @@ describe('website setting load', () => {
     const website = new WebsiteSettings();
     const utilities = new Utilities();
 
-    it('website settings', async () => {
+    before('Open App', async () => {
 
-        //await browser.url('https://prolific-cloud.pc-staging.com/');
-        // await browser.url('https://prolific1.pc-staging.com/signin');
         await browser.url(utilities.URL)  //'https://abc-5021.pc-staging.com/admin'
+        
         await browser.maximizeWindow();
+        await browser.pause(1000);
+
+    })
+
+    // ---------------------------------------------- Page [AT0007] Website Settings -----------------------------------------------
+    /* -----------------------------------------------------------------
+                 
+                -------------  Theme  ----------------
+             
+     ------------------------------------------------------------------ */
+
+
+    it('Theme website settings', async () => {
 
         await utilities.Signin();
-      
-
-        // ---------------------------------------------- Page [AT0007] Website Settings -----------------------------------------------
         await browser.takeScreenshot();
-        
-        await website.websiteSettingsClick.click();
 
-        /* -----------------------------------------------------------------
-             
-            -------------  Theme  ----------------
-         
-        ----------------------------------------------------------------- */
+        await website.websiteSettingsClick.click();
 
         (await website.themeClick).click();
         await website.logoUploadClickTheme.click();
 
-//====================== test img upload start ==================================
-      
-        // const abc="fileUpload";
-        // await utilities.imgUpload(abc);
+        //====================== test img upload start ==================================
+
+
         const filePath = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\youtube.jpg'
         await browser.execute(() => {
-            // console.log("=============",fileUpload);
-             document.getElementById("fileUpload").style.display = "block";
-         })
 
-        
+            document.getElementById("fileUpload").style.display = "block";
+        })
+
+
         const remoteFilePath = await browser.uploadFile(filePath)
-        await website.clickUploadLogo.setValue(remoteFilePath); 
+        await website.clickUploadLogo.setValue(remoteFilePath);
         await browser.pause(5000);
 
-//====================== test img upload end ==================================
+        //====================== test img upload end ==================================
 
         await (await website.saveLogo).click();
-
-        
         (await website.favIconUploadClick).click();
 
         const filePath1 = 'C:\\Users\\SQA Tamim\\Downloads\\pic\\twitter.jpg'
@@ -58,7 +58,7 @@ describe('website setting load', () => {
             document.getElementById("fileUpload").style.display = "block";
         })
 
-         await website.clickUploadFavIcon.setValue(remoteFilePath1);
+        await website.clickUploadFavIcon.setValue(remoteFilePath1);
         (await website.saveFavIcon).click();
         (await website.primaryColor).click();
         (await website.yellowColor).click();
@@ -73,14 +73,19 @@ describe('website setting load', () => {
         (await website.abrilSelect).click();
         (await website.showInSignPage).click();
         (await website.saveThemeUpdate).click();
-        await browser.pause(3000);
+        await browser.pause(5000);
         await browser.takeScreenshot();
+
+    })
+
+
         /* -----------------------------------------------------------------
              
             -------------  Profile  ----------------
          
         ----------------------------------------------------------------- */
 
+    it('Profile website settings', async () => {
         (await website.profileClick).click();
         await browser.pause(3000);
         await browser.takeScreenshot();
@@ -90,20 +95,22 @@ describe('website setting load', () => {
         (await website.airlineSelect).click();
         (await website.businessAddresss).setValue("abc slash");
         await browser.takeScreenshot();
- /* -----------------------------------------------------------------
-             
-            -------------  Domain  ----------------
-         
- ----------------------------------------------------------------- */
-         await website.domainClick.click();
+
+    })   
+
+        /* -----------------------------------------------------------------
+                    
+                   -------------  Domain  ----------------
+                
+        ----------------------------------------------------------------- */
+    it('Domain website settings', async () => {
+        await website.domainClick.click();
         // await website.customDomain.setValue("pcStaging");
-         await website.connectDomain.click();
-         await website.upgradeDomain.click();
-         await website.selectCard.click();
-         await browser.pause(3000);
-         await browser.takeScreenshot();
-
-
+        await website.connectDomain.click();
+        await website.upgradeDomain.click();
+       // await website.selectCard.click();
+        await browser.pause(3000);
+        await browser.takeScreenshot();
 
 
     })

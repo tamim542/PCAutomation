@@ -29,7 +29,7 @@ describe('Domain Update for checking', () => {
         await dU.saveCustomDomain.click();
         await browser.pause(3000);
         await dU.getDomain.click();
-        await browser.pause(4000);
+        await browser.pause(6000);
 
 
 

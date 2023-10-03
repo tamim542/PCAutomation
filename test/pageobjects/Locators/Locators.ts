@@ -463,6 +463,12 @@ class LocatorHome {
   get pageClick() {
     return $("//body/div[@id='root']/main[1]/div[1]/div[1]/ul[1]/div[1]/div[1]/li[2]/a[1]/div[1]/div[1]/span[1]");
   }
+  get deletePage() {
+    return $("(//div[@aria-label='page-delete'])[3]");
+  }
+  get confirmDeletePage() {
+    return $("// button[contains(text(),'Confirm')]");
+  }
   get createNew() {
     return $("//a[@class='chakra-link css-1krilld']");
   }
@@ -470,10 +476,10 @@ class LocatorHome {
     return $("//input[@placeholder='Enter name']");
   }
   get addSection() {
-    return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[1]/button[1]/*[1]");
+    return $("(//button[@class='chakra-button css-lv8nr9'])[1]");
   }
   get singleSection() {
-    return $("(//div[@class='chakra-stack css-rzdf1i'])[3]"); // //body/div[7]/div[4]/div[1]/section[1]/div[1]/div[1]/div[3]/*[1]
+    return $("(//div[@class='chakra-stack css-rzdf1i'])[3]"); 
   }
   get eyeIcon() {
     return $("//button[@class='chakra-button css-vocj4y']");
@@ -481,7 +487,7 @@ class LocatorHome {
 
 
   get useTemplatePage(){
-    return $("//body/div[@id='root']/main[1]/div[1]/div[2]/div[3]/div[1]/div[2]/button[2]/*[1]");
+    return $("(//button[@class='chakra-button css-lv8nr9'])[2]");
   }
   get paginationFour(){
     return $('//a[@aria-label="Page 4"]');
@@ -500,7 +506,7 @@ class LocatorHome {
     return $("(//button[contains(text(),'Save')])[1]");
   }
   get pagePublish(){
-    return $("(//button[contains(text(),'Publish')])[1]");
+    return $("//button[contains(text(),'Publish')]");
   }
 
  
@@ -568,6 +574,12 @@ class LocatorHome {
   get headerSetClick() {
     return $("//span[contains(text(),'Header Set')]");
   }
+  get deleteHeaderPage() {
+    return $("(// button[contains(text(),'Delete')])[3]");
+  }
+  get confirmDeleteHeaderPage() {
+    return $("// button[contains(text(),'Confirm')]");
+  }
   get createNewHeaderSet() {
     return $("//a[@href='/admin/builder/header/create']");
   }
@@ -592,6 +604,12 @@ class LocatorHome {
 
   get footerClick() {
     return $("//span[contains(text(),'Footer Set')]");
+  }
+  get deleteFooterPage() {
+    return $("(// button[contains(text(),'Delete')])[3]");
+  }
+  get confirmDeleteFooterPage() {
+    return $("// button[contains(text(),'Confirm')]");
   }
 
   get createNewFooterClick() {

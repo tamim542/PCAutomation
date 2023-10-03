@@ -36,6 +36,8 @@ describe(('Sites automation'), () => {
     await browser.takeScreenshot();
     
     await site.pageClick.click();
+    await site.deletePage.click();
+    await site.confirmDeletePage.click();
     await site.createNew.click();
     await site.pageName.setValue("Tamporary");
     await site.addSection.click();
@@ -95,12 +97,12 @@ describe(('Sites automation'), () => {
 
    it(('Sites, Header Set automation'), async () => {
     await site.headerSetClick.click();
-    //await site.leavePageConfirm.click();
+    await site.deleteHeaderPage.click();
+    await site.confirmDeleteHeaderPage.click();
     await site.createNewHeaderSet.click();
     await site.setHeaderName.setValue("Abc Header");
     await site.addSection.click();
     await site.singleSection.click();
-   // await site.icon.click();
     
     await site.headerSave.click();
     
@@ -118,9 +120,10 @@ describe(('Sites automation'), () => {
     ----------------------------------------------------------------- */
 
 
-    it(('Sites, Menu Set automation'), async () => {
+    it(('Sites, Footer Set automation'), async () => {
     await site.footerClick.click();
-   // await site.leavePageConfirm.click();
+    await site.deleteFooterPage.click();
+    await site.confirmDeleteFooterPage.click();
     await browser.pause(3000);
     await site.createNewFooterClick.click();
     await site.pageNameFooter.setValue("Footer");
