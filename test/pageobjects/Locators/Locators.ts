@@ -100,7 +100,7 @@ class LocatorHome {
    ----------------------------------------------------------------- */
 
   get twette() {
-    return $("//body/div[@id='__next']/footer[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]");
+    return $("//a[@href='https://twitter.com/ProlificCloud']");
   }
   get facebook() {
     return $("//body/div[@id='__next']/footer[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[2]");

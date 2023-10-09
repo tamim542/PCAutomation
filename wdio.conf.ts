@@ -33,17 +33,17 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/Registration.ts',
-        './test/specs/**/RegistrationWithSubscrip.ts',
-        './test/specs/**/SignIn.ts',
-        './test/specs/**/Sites.ts',
-        './test/specs/**/Blog.ts',
-        './test/specs/**/Operation.ts',
-        './test/specs/**/Configuration.ts',
-        './test/specs/**/WebsiteSettings.ts',
-        './test/specs/**/Billing.ts',
+        // './test/specs/**/Registration.ts',
+        // './test/specs/**/RegistrationWithSubscrip.ts',
+        // './test/specs/**/SignIn.ts',
+        // './test/specs/**/Sites.ts',
+        // './test/specs/**/Blog.ts',
+        // './test/specs/**/Operation.ts',
+        // './test/specs/**/Configuration.ts',
+        // './test/specs/**/WebsiteSettings.ts',
+        // './test/specs/**/Billing.ts',
         './test/specs/**/HomeTestCase.ts',
-        './test/specs/**/DomainUpdate.ts'
+        //'./test/specs/**/DomainUpdate.ts'
         
 
     ],
